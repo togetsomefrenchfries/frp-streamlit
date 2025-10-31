@@ -79,6 +79,9 @@ def export_frp_data():
         print(f"  - 文件大小: {file_size:.2f} MB")
         
         # 生成数据说明文件
+        columns_list = '\n'.join([f'- {col}' for col in df.columns[:10]])
+        more_cols = '...(更多列)' if len(df.columns) > 10 else ''
+        
         readme_content = f"""# FRP预测平台数据包
 
 ## 📋 数据信息
@@ -91,8 +94,8 @@ def export_frp_data():
 ## 🗂️ 数据结构
 以下是主要数据列：
 
-{''.join([f'- {col}\n' for col in df.columns[:10]])}
-{'...(更多列)' if len(df.columns) > 10 else ''}
+{columns_list}
+{more_cols}
 
 ## 🚀 如何使用此数据
 1. 将CSV文件放在新的FRP预测平台项目目录中
