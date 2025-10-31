@@ -1,0 +1,32 @@
+[
+  {
+    "experiment_name": "Conservative",
+    "error": "Target column 'retention1' not found in data",
+    "timestamp": "2025-09-21T01:57:04.845141"
+  },
+  {
+    "experiment_name": "Standard",
+    "error": "Target column 'retention1' not found in data",
+    "timestamp": "2025-09-21T01:57:04.846138"
+  },
+  {
+    "experiment_name": "High_Performance",
+    "error": "Target column 'retention1' not found in data",
+    "timestamp": "2025-09-21T01:57:04.847135"
+  },
+  {
+    "experiment_name": "Deep_Learning_Style",
+    "error": "Target column 'retention1' not found in data",
+    "timestamp": "2025-09-21T01:57:04.848131"
+  },
+  {
+    "experiment_name": "Regularized",
+    "error": "Target column 'retention1' not found in data",
+    "timestamp": "2025-09-21T01:57:04.848131"
+  },
+  {
+    "experiment_name": "Auto_Tuning",
+    "error": "Target column 'retention1' not found in data",
+    "timestamp": "2025-09-21T01:57:04.849128"
+  }
+]

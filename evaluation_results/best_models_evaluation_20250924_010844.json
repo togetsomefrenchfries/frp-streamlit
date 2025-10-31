@@ -1,0 +1,79 @@
+{
+  "timestamp": "20250924_010844",
+  "experiment_type": "best_model_evaluation",
+  "task1_random_500": {
+    "RandomForest": {
+      "r2": 0.9968665153015259,
+      "rmse": 0.013301033247047392,
+      "mae": 0.005862510815635277,
+      "training_time": 0.12776970863342285,
+      "test_samples": 27
+    },
+    "XGBoost": {
+      "r2": 0.9881549212206538,
+      "rmse": 0.02586071729141927,
+      "mae": 0.011787121479187267,
+      "training_time": 0.039945125579833984,
+      "test_samples": 27
+    },
+    "LightGBM": {
+      "r2": 0.9079893022196716,
+      "rmse": 0.07207601251356051,
+      "mae": 0.046189984314047985,
+      "training_time": 0.13128042221069336,
+      "test_samples": 27
+    }
+  },
+  "task2_85_15_split": {
+    "RandomForest": {
+      "cv_r2_mean": 0.9984596380551451,
+      "cv_r2_std": 0.0014418018101598508,
+      "test_r2": 0.9972226966356902,
+      "test_rmse": 0.01324016707266876,
+      "test_mae": 0.006259355581742655,
+      "training_time": 0.14051437377929688,
+      "train_samples": 113,
+      "test_samples": 21
+    },
+    "XGBoost": {
+      "cv_r2_mean": 0.9929777257983264,
+      "cv_r2_std": 0.009731536311562776,
+      "test_r2": 0.9694567547421433,
+      "test_rmse": 0.04390756925048191,
+      "test_mae": 0.0189851502611221,
+      "training_time": 0.02266550064086914,
+      "train_samples": 113,
+      "test_samples": 21
+    },
+    "LightGBM": {
+      "cv_r2_mean": 0.9270970450185558,
+      "cv_r2_std": 0.03503717722363159,
+      "test_r2": 0.9667558883163453,
+      "test_rmse": 0.0458077722617666,
+      "test_mae": 0.03032149096395201,
+      "training_time": 0.01970839500427246,
+      "train_samples": 113,
+      "test_samples": 21
+    }
+  },
+  "best_parameters": {
+    "RandomForest": {
+      "params": {},
+      "cv_r2_mean": 0.9982455134712351,
+      "test_r2": 0.9971406231092207,
+      "test_rmse": 0.014874059926532731
+    },
+    "XGBoost": {
+      "params": {},
+      "cv_r2_mean": 0.9941225174157264,
+      "test_r2": 0.9794912523629316,
+      "test_rmse": 0.03983486924512257
+    },
+    "LightGBM": {
+      "params": {},
+      "cv_r2_mean": 0.9332278054074562,
+      "test_r2": 0.9287073320776498,
+      "test_rmse": 0.07427048484655327
+    }
+  }
+}

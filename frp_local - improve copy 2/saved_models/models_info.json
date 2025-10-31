@@ -1,0 +1,133 @@
+{
+  "RandomForest": {
+    "model_file": "saved_models\\randomforest_best_model.pkl",
+    "config": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_split": 2,
+      "random_state": 42
+    },
+    "train_r2": 0.9999587397130095,
+    "test_r2": 0.9999572408747579,
+    "training_time": 0.652969,
+    "config_id": 52,
+    "feature_names": [
+      "feat_0_pH_of_condition_enviroment",
+      "feat_1_Chloride_ion",
+      "feat_2_concrete",
+      "feat_3_diameter",
+      "feat_4_load_value",
+      "feat_5_fiber_content",
+      "feat_6_initial_tensile_strength",
+      "feat_7_Glass_or_Basalt",
+      "feat_8_Vinyl_ester_or_Epoxy",
+      "feat_9_condition_time",
+      "feat_10_Temperature",
+      "feat_11_Tensile_strength_retention",
+      "feat_12_surface_treatment",
+      "feat_13_glass_transition_temperature"
+    ],
+    "n_features": 14,
+    "n_train_samples": 2417,
+    "n_test_samples": 427
+  },
+  "XGBoost": {
+    "model_file": "saved_models\\xgboost_best_model.pkl",
+    "config": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "random_state": 42
+    },
+    "train_r2": 0.9997709090535629,
+    "test_r2": 0.9992800160644243,
+    "training_time": 0.118602,
+    "config_id": 5,
+    "feature_names": [
+      "feat_0_pH_of_condition_enviroment",
+      "feat_1_Chloride_ion",
+      "feat_2_concrete",
+      "feat_3_diameter",
+      "feat_4_load_value",
+      "feat_5_fiber_content",
+      "feat_6_initial_tensile_strength",
+      "feat_7_Glass_or_Basalt",
+      "feat_8_Vinyl_ester_or_Epoxy",
+      "feat_9_condition_time",
+      "feat_10_Temperature",
+      "feat_11_Tensile_strength_retention",
+      "feat_12_surface_treatment",
+      "feat_13_glass_transition_temperature"
+    ],
+    "n_features": 14,
+    "n_train_samples": 2417,
+    "n_test_samples": 427
+  },
+  "LightGBM": {
+    "model_file": "saved_models\\lightgbm_best_model.pkl",
+    "config": {
+      "n_estimators": 100,
+      "max_depth": 7,
+      "learning_rate": 0.2,
+      "num_leaves": 127,
+      "random_state": 42
+    },
+    "train_r2": 0.9989652549149477,
+    "test_r2": 0.9992342980576588,
+    "training_time": 0.051826,
+    "config_id": 4,
+    "feature_names": [
+      "feat_0_pH_of_condition_enviroment",
+      "feat_1_Chloride_ion",
+      "feat_2_concrete",
+      "feat_3_diameter",
+      "feat_4_load_value",
+      "feat_5_fiber_content",
+      "feat_6_initial_tensile_strength",
+      "feat_7_Glass_or_Basalt",
+      "feat_8_Vinyl_ester_or_Epoxy",
+      "feat_9_condition_time",
+      "feat_10_Temperature",
+      "feat_11_Tensile_strength_retention",
+      "feat_12_surface_treatment",
+      "feat_13_glass_transition_temperature"
+    ],
+    "n_features": 14,
+    "n_train_samples": 2417,
+    "n_test_samples": 427
+  },
+  "preprocessor": {
+    "info": {
+      "feature_names": [
+        "feat_0_pH_of_condition_enviroment",
+        "feat_1_Chloride_ion",
+        "feat_2_concrete",
+        "feat_3_diameter",
+        "feat_4_load_value",
+        "feat_5_fiber_content",
+        "feat_6_initial_tensile_strength",
+        "feat_7_Glass_or_Basalt",
+        "feat_8_Vinyl_ester_or_Epoxy",
+        "feat_9_condition_time",
+        "feat_10_Temperature",
+        "feat_11_Tensile_strength_retention",
+        "feat_12_surface_treatment",
+        "feat_13_glass_transition_temperature"
+      ],
+      "data_filter_rules": {
+        "target_parameter": "Tensile",
+        "retention1_required": true,
+        "condition_time_required": true,
+        "min_features_required": 7
+      },
+      "missing_value_rules": {
+        "diameter": "median",
+        "load_value": 0,
+        "fiber_content": "median",
+        "initial_tensile_strength": "median",
+        "Temperature": 25,
+        "glass_transition_temperature": "median"
+      }
+    }
+  }
+}

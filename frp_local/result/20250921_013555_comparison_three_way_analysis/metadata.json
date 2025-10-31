@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250921_013555",
+  "strategy": "comparison",
+  "experiment_type": "three_way_analysis",
+  "folder_name": "20250921_013555_comparison_three_way_analysis",
+  "created_at": "2025-09-21T01:35:55.850441",
+  "description": "comparison策略的three_way_analysis实验结果",
+  "saved_files": [
+    "result\\20250921_013555_comparison_three_way_analysis\\three_way_comparison_20250921_013529.png",
+    "result\\20250921_013555_comparison_three_way_analysis\\three_way_comparison.py"
+  ],
+  "file_descriptions": {
+    "three_way_comparison_*.png": "三方策略对比图表",
+    "three_way_comparison.py": "对比分析脚本"
+  }
+}

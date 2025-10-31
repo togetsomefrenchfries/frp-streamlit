@@ -1,0 +1,86 @@
+[
+  {
+    "experiment_name": "Config_01",
+    "description": "第1组超参数配置",
+    "duration_seconds": 0.12514853477478027,
+    "timestamp": "2025-09-21T03:21:15.197908",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_02",
+    "description": "第2组超参数配置",
+    "duration_seconds": 0.02393054962158203,
+    "timestamp": "2025-09-21T03:21:15.223196",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_03",
+    "description": "第3组超参数配置",
+    "duration_seconds": 0.025596141815185547,
+    "timestamp": "2025-09-21T03:21:15.249789",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_04",
+    "description": "第4组超参数配置",
+    "duration_seconds": 0.025922536849975586,
+    "timestamp": "2025-09-21T03:21:15.276710",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_05",
+    "description": "第5组超参数配置",
+    "duration_seconds": 0.023909568786621094,
+    "timestamp": "2025-09-21T03:21:15.300619",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_06",
+    "description": "第6组超参数配置",
+    "duration_seconds": 0.023918867111206055,
+    "timestamp": "2025-09-21T03:21:15.325535",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_07",
+    "description": "第7组超参数配置",
+    "duration_seconds": 0.026909351348876953,
+    "timestamp": "2025-09-21T03:21:15.353442",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_08",
+    "description": "第8组超参数配置",
+    "duration_seconds": 0.023921489715576172,
+    "timestamp": "2025-09-21T03:21:15.378360",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_09",
+    "description": "第9组超参数配置",
+    "duration_seconds": 0.02591228485107422,
+    "timestamp": "2025-09-21T03:21:15.404272",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_10",
+    "description": "第10组超参数配置",
+    "duration_seconds": 0.024620532989501953,
+    "timestamp": "2025-09-21T03:21:15.428893",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_11",
+    "description": "第11组超参数配置",
+    "duration_seconds": 0.02292323112487793,
+    "timestamp": "2025-09-21T03:21:15.452804",
+    "results": {}
+  },
+  {
+    "experiment_name": "Config_12",
+    "description": "第12组超参数配置",
+    "duration_seconds": 0.02292346954345703,
+    "timestamp": "2025-09-21T03:21:15.476722",
+    "results": {}
+  }
+]

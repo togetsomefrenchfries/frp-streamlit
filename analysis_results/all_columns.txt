@@ -1,0 +1,160 @@
+数据文件中的所有列名
+========================================
+
+  1. feature_name
+  2. Title
+  3. Author
+  4. SCI
+  5. Journal_or_Conference_name
+  6. Year
+  7. No.
+  8. no.
+  9. Fiber_type
+ 10. Fiber_type_detail
+ 11. Matrix_type
+ 12. Matrix_type_detail
+ 13. glass_transition_temperature
+ 14. glass_transition_temperature_run_2
+ 15. cure_ratio
+ 16. Fiber_content_weight
+ 17. Fiber_content_volume
+ 18. Void_content
+ 19. diameter
+ 20. average_area
+ 21. nominal_area
+ 22. rib
+ 23. surface_treatment
+ 24. Water_absorption_at_saturation
+ 25. Water_absorption_test_standard
+ 26. Water_absorption_note
+ 27. Brand_name
+ 28. Manufacturer
+ 29. Important_notes
+ 30. Notes_of_rebar
+ 31. Target_parameter
+ 32. note_of_target_parameter
+ 33. num
+ 34. note_of_number
+ 35. Value1
+ 36. COV1
+ 37. note_of_Value1
+ 38. Value2
+ 39. COV2
+ 40. Value2note
+ 41. Value3
+ 42. COV3
+ 43. Value3note
+ 44. SEM-T-BCBT
+ 45. SEM-L-BCBT
+ 46. OTHER
+ 47. OTHER1
+ 48. FTIR
+ 49. note
+ 50. temperature
+ 51. note_of_temperature
+ 52. time
+ 53. note_of_time
+ 54. concrete
+ 55. pH_of_concrete
+ 56. strength_of_concrete
+ 57. crack
+ 58. cover
+ 59. note_of_concrete
+ 60. pH
+ 61. pHafter
+ 62. ingredient
+ 63. pH.1
+ 64. RH
+ 65. ingredient.1
+ 66. note.1
+ 67. Location
+ 68. Effektive_Klimaklassifikation
+ 69. field_average_humidity
+ 70. field_average_temperature
+ 71. pH.2
+ 72. Ingrediant
+ 73. number
+ 74. type
+ 75. SolutionorMoisture
+ 76. cycle_pH
+ 77. cycle_pH_after
+ 78. cycle_ingredient
+ 79. temp
+ 80. temp2
+ 81. RH.1
+ 82. RH2
+ 83. OTHER1.1
+ 84. OTHER2
+ 85. time_in_cycle
+ 86. note.2
+ 87. UV
+ 88. note.3
+ 89. stress_or_strain
+ 90. type_of_load
+ 91. value
+ 92. ultimate_tensile_strength
+ 93. tensile_modulus
+ 94. note.4
+ 95. after_condition
+ 96. note.5
+ 97. num.1
+ 98. Value1.1
+ 99. COV1.1
+100. Value1note
+101. retention1
+102. Value2.1
+103. COV2.1
+104. Value2note.1
+105. retention2
+106. Value3.1
+107. COV3.1
+108. Value3note.1
+109. retention3
+110. num.2
+111. water_absorption_ratio
+112. COV
+113. note.6
+114. num.3
+115. glass_transition_temperature.1
+116. run2
+117. COV.1
+118. cure_ratio.1
+119. note.7
+120. num.4
+121. OTHERS
+122. OTHERS_note
+123. SEM-T-BCAT
+124. SEM-L-BCAT
+125. SEM-T-ACBT
+126. SEM-L-ACBT
+127. SEM-T-ACAT
+128. SEM-L-ACAT
+129. other
+130. other2
+131. note.8
+132. FTIR.1
+133. note.9
+134. important_note
+135. Unnamed: 134
+136. Unnamed: 135
+137. Unnamed: 136
+138. Unnamed: 137
+139. Unnamed: 138
+140. Unnamed: 139
+141. Unnamed: 140
+142. Unnamed: 141
+143. Unnamed: 142
+144. Unnamed: 143
+145. Unnamed: 144
+146. Unnamed: 145
+147. Unnamed: 146
+148. Unnamed: 147
+149. Unnamed: 148
+150. Unnamed: 149
+151. Unnamed: 150
+152. Unnamed: 151
+153. Unnamed: 152
+154. Unnamed: 153
+155. Unnamed: 154
+156. Unnamed: 155
+157. Unnamed: 156

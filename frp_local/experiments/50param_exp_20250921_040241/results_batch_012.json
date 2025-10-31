@@ -1,0 +1,3292 @@
+[
+  {
+    "timestamp": "2025-09-21T04:02:59.720460",
+    "model_name": "RandomForest",
+    "config_index": 1,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.320472750182059,
+      0.37788974446858237,
+      0.3606526950340674,
+      0.3550222495035207,
+      0.3741854015193363
+    ],
+    "cv_mean": 0.3576445681415132,
+    "cv_std": 0.020401645846346326,
+    "train_r2": 0.37294942784970286,
+    "test_r2": 0.3599377032310628,
+    "train_mse": 0.023373069708830293,
+    "test_mse": 0.024432677558370655,
+    "train_mae": 0.10769061467404371,
+    "test_mae": 0.11112498663196754,
+    "cv_time": 2.1407132148742676,
+    "total_time": 2.449381113052368,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:00.896072",
+    "model_name": "RandomForest",
+    "config_index": 2,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5126351307880648,
+      0.4897785990952672,
+      0.5599882817132804,
+      0.5247711882452621,
+      0.5103402759563522
+    ],
+    "cv_mean": 0.5195026951596453,
+    "cv_std": 0.023158043919485623,
+    "train_r2": 0.6092285403785633,
+    "test_r2": 0.5636704292089576,
+    "train_mse": 0.01456585636248171,
+    "test_mse": 0.016655722054142987,
+    "train_mae": 0.0812723441564773,
+    "test_mae": 0.08884834267395983,
+    "cv_time": 1.0738816261291504,
+    "total_time": 1.1746165752410889,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:01.045727",
+    "model_name": "RandomForest",
+    "config_index": 3,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.300628219445658,
+      0.3582651711820146,
+      0.34318787235989234,
+      0.3323803220177546,
+      0.3494906415542057
+    ],
+    "cv_mean": 0.3367904453119051,
+    "cv_std": 0.01995265233343526,
+    "train_r2": 0.3447689605581745,
+    "test_r2": 0.3358372177753314,
+    "train_mse": 0.024423485824668602,
+    "test_mse": 0.025352649556584853,
+    "train_mae": 0.1105521141012657,
+    "test_mae": 0.11303329070359715,
+    "cv_time": 0.08870983123779297,
+    "total_time": 0.14870548248291016,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:02.249402",
+    "model_name": "RandomForest",
+    "config_index": 4,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.517153899278474,
+      0.4973823884836259,
+      0.5678581704559328,
+      0.5246279975333983,
+      0.5207898017019745
+    ],
+    "cv_mean": 0.5255624514906811,
+    "cv_std": 0.023140436185942935,
+    "train_r2": 0.6180555005374992,
+    "test_r2": 0.5612348689944604,
+    "train_mse": 0.014236834806206937,
+    "test_mse": 0.016748693094142064,
+    "train_mae": 0.07985517250596649,
+    "test_mae": 0.08878476670462311,
+    "cv_time": 0.6830651760101318,
+    "total_time": 1.2026793956756592,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:02.697179",
+    "model_name": "RandomForest",
+    "config_index": 5,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5022647427268081,
+      0.4939335368556418,
+      0.5504405257642977,
+      0.5082143360068714,
+      0.509971421992192
+    ],
+    "cv_mean": 0.5129649126691622,
+    "cv_std": 0.019558309968217644,
+    "train_r2": 0.6029126354009813,
+    "test_r2": 0.5538826573627115,
+    "train_mse": 0.014801279299437404,
+    "test_mse": 0.017029344238641945,
+    "train_mae": 0.08196327160786307,
+    "test_mae": 0.09009379414252722,
+    "cv_time": 0.24373316764831543,
+    "total_time": 0.4457824230194092,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:03.138976",
+    "model_name": "RandomForest",
+    "config_index": 6,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4739941328653814,
+      0.5002749750622799,
+      0.527394246514499,
+      0.4851341914740317,
+      0.5140101875834413
+    ],
+    "cv_mean": 0.5001615466999267,
+    "cv_std": 0.019204023595997422,
+    "train_r2": 0.5671402843015461,
+    "test_r2": 0.5305085532955638,
+    "train_mse": 0.016134679974009223,
+    "test_mse": 0.017921588557314228,
+    "train_mae": 0.08733267021974819,
+    "test_mae": 0.09377476322256978,
+    "cv_time": 0.24625015258789062,
+    "total_time": 0.4328293800354004,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:03.615743",
+    "model_name": "RandomForest",
+    "config_index": 7,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5005502161894717,
+      0.49533871723349365,
+      0.5483499068052275,
+      0.5170041111633684,
+      0.5199598498100474
+    ],
+    "cv_mean": 0.5162405602403217,
+    "cv_std": 0.018593010510710294,
+    "train_r2": 0.5905216161650405,
+    "test_r2": 0.5391569709246198,
+    "train_mse": 0.015263149791592356,
+    "test_mse": 0.01759145819283639,
+    "train_mae": 0.0841649260026295,
+    "test_mae": 0.09237209088676251,
+    "cv_time": 0.2745091915130615,
+    "total_time": 0.47510242462158203,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:03.879186",
+    "model_name": "RandomForest",
+    "config_index": 8,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5192710383870877,
+      0.47939888584886636,
+      0.5623654760680525,
+      0.5206986196621868,
+      0.5147382791874384
+    ],
+    "cv_mean": 0.5192944598307263,
+    "cv_std": 0.026341982683574374,
+    "train_r2": 0.6208010472164893,
+    "test_r2": 0.5595500694814373,
+    "train_mse": 0.01413449560620139,
+    "test_mse": 0.016813005839104535,
+    "train_mae": 0.07850117957462412,
+    "test_mae": 0.08873843531368142,
+    "cv_time": 0.14856982231140137,
+    "total_time": 0.2625150680541992,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:04.993795",
+    "model_name": "RandomForest",
+    "config_index": 9,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5116711667569267,
+      0.5028734634657503,
+      0.560753448505694,
+      0.5174435675618987,
+      0.5172614360813639
+    ],
+    "cv_mean": 0.5220006164743267,
+    "cv_std": 0.0200875783991822,
+    "train_r2": 0.6126940997780752,
+    "test_r2": 0.5596111375347319,
+    "train_mse": 0.014436678964322077,
+    "test_mse": 0.01681067472842547,
+    "train_mae": 0.08073769672964845,
+    "test_mae": 0.08905372010796284,
+    "cv_time": 0.6172289848327637,
+    "total_time": 1.1135902404785156,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:05.232040",
+    "model_name": "RandomForest",
+    "config_index": 10,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5024358609588033,
+      0.48578367090649477,
+      0.5508475334506128,
+      0.506709352720222,
+      0.5198529919926609
+    ],
+    "cv_mean": 0.5131258820057587,
+    "cv_std": 0.021777152717268395,
+    "train_r2": 0.5996428096066331,
+    "test_r2": 0.5510795523416729,
+    "train_mse": 0.014923160802495368,
+    "test_mse": 0.01713634532507839,
+    "train_mae": 0.08221621138482083,
+    "test_mae": 0.0901485374284962,
+    "cv_time": 0.1346883773803711,
+    "total_time": 0.2362520694732666,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:06.041243",
+    "model_name": "RandomForest",
+    "config_index": 11,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4057608295510149,
+      0.4687996892687084,
+      0.4411233295691994,
+      0.4297568876480147,
+      0.4625605433114872
+    ],
+    "cv_mean": 0.44160025586968493,
+    "cv_std": 0.02282148170146904,
+    "train_r2": 0.4781123160866497,
+    "test_r2": 0.45742278942100967,
+    "train_mse": 0.019453163362018223,
+    "test_mse": 0.02071144340717555,
+    "train_mae": 0.09716458967125774,
+    "test_mae": 0.10215699332008299,
+    "cv_time": 0.4599874019622803,
+    "total_time": 0.7911133766174316,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:06.913582",
+    "model_name": "RandomForest",
+    "config_index": 12,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.48484733372983413,
+      0.5027155557294603,
+      0.5445082399098418,
+      0.4955171665270073,
+      0.5192342970752502
+    ],
+    "cv_mean": 0.5093645185942787,
+    "cv_std": 0.020830477168319785,
+    "train_r2": 0.5815147746650495,
+    "test_r2": 0.5397733998586448,
+    "train_mse": 0.015598876355900819,
+    "test_mse": 0.01756792765610784,
+    "train_mae": 0.08542168817060573,
+    "test_mae": 0.09284220075597886,
+    "cv_time": 0.4890575408935547,
+    "total_time": 0.8704135417938232,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:07.123604",
+    "model_name": "RandomForest",
+    "config_index": 13,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.46950192486276987,
+      0.495615104416548,
+      0.5319608939441841,
+      0.4845885762201635,
+      0.508694868003627
+    ],
+    "cv_mean": 0.49807227348945854,
+    "cv_std": 0.021285632257888317,
+    "train_r2": 0.567260981945144,
+    "test_r2": 0.5335699937738094,
+    "train_mse": 0.016130181015611287,
+    "test_mse": 0.017804726201186227,
+    "train_mae": 0.08734376533223441,
+    "test_mae": 0.09362149869493823,
+    "cv_time": 0.12066984176635742,
+    "total_time": 0.209214448928833,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:08.042113",
+    "model_name": "RandomForest",
+    "config_index": 14,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5068099427083081,
+      0.49965854902421536,
+      0.5662475823499253,
+      0.514673040512047,
+      0.520685063070129
+    ],
+    "cv_mean": 0.5216148355329249,
+    "cv_std": 0.023419643260202964,
+    "train_r2": 0.6104780852610399,
+    "test_r2": 0.5577797324954546,
+    "train_mse": 0.014519280055976982,
+    "test_mse": 0.016880583749827476,
+    "train_mae": 0.08084726972517182,
+    "test_mae": 0.08917384111350403,
+    "cv_time": 0.5203046798706055,
+    "total_time": 0.9171161651611328,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:08.751077",
+    "model_name": "RandomForest",
+    "config_index": 15,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5121325235470597,
+      0.5000019717925738,
+      0.5609645509318848,
+      0.5187893940300203,
+      0.5141537117191142
+    ],
+    "cv_mean": 0.5212084304041305,
+    "cv_std": 0.020824292949549118,
+    "train_r2": 0.6119328441986529,
+    "test_r2": 0.5626474690881463,
+    "train_mse": 0.014465054474232,
+    "test_mse": 0.016694770838789456,
+    "train_mae": 0.08079073429996168,
+    "test_mae": 0.0888497794206079,
+    "cv_time": 0.41146087646484375,
+    "total_time": 0.7069709300994873,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:08.920572",
+    "model_name": "RandomForest",
+    "config_index": 16,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.3875483133463248,
+      0.444115452865123,
+      0.43307122386532326,
+      0.41457955751075926,
+      0.44504176011186436
+    ],
+    "cv_mean": 0.4248712615398789,
+    "cv_std": 0.021648782544177844,
+    "train_r2": 0.4437497237804705,
+    "test_r2": 0.4293704222436392,
+    "train_mse": 0.020734015817976008,
+    "test_mse": 0.02178226799011633,
+    "train_mae": 0.1007277934124722,
+    "test_mae": 0.10515960717509217,
+    "cv_time": 0.09368419647216797,
+    "total_time": 0.16146588325500488,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:09.076425",
+    "model_name": "RandomForest",
+    "config_index": 17,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.31664169359751715,
+      0.37669855853855105,
+      0.3586292415000437,
+      0.35456540407039217,
+      0.3662889882490694
+    ],
+    "cv_mean": 0.3545647771911147,
+    "cv_std": 0.020406085079829064,
+    "train_r2": 0.3686644707296668,
+    "test_r2": 0.35807374892347443,
+    "train_mse": 0.023532789842921717,
+    "test_mse": 0.024503829061608286,
+    "train_mae": 0.10788674110408768,
+    "test_mae": 0.11126528360207827,
+    "cv_time": 0.09229826927185059,
+    "total_time": 0.15486645698547363,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:09.302191",
+    "model_name": "RandomForest",
+    "config_index": 18,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4834659990556718,
+      0.4988555504032971,
+      0.5402886315344648,
+      0.4966766186502125,
+      0.5171805858225758
+    ],
+    "cv_mean": 0.5072934770932445,
+    "cv_std": 0.019688068139260977,
+    "train_r2": 0.5682377773006292,
+    "test_r2": 0.5336045190900653,
+    "train_mse": 0.01609377134317175,
+    "test_mse": 0.017803408288970587,
+    "train_mae": 0.08674926934462708,
+    "test_mae": 0.0934254133052943,
+    "cv_time": 0.1293189525604248,
+    "total_time": 0.22478055953979492,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:09.634000",
+    "model_name": "RandomForest",
+    "config_index": 19,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4030293581086354,
+      0.46848241975842475,
+      0.4354419234927912,
+      0.4220373856669918,
+      0.4612162293535841
+    ],
+    "cv_mean": 0.43804146327608545,
+    "cv_std": 0.02430002975210468,
+    "train_r2": 0.4740849782451946,
+    "test_r2": 0.4561789029130867,
+    "train_mse": 0.019603280836254063,
+    "test_mse": 0.020758925469657137,
+    "train_mae": 0.09738750742001089,
+    "test_mae": 0.10188006494470078,
+    "cv_time": 0.19536089897155762,
+    "total_time": 0.33090686798095703,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:10.055118",
+    "model_name": "RandomForest",
+    "config_index": 20,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4831950362213556,
+      0.4994386813608017,
+      0.5426309997656495,
+      0.49565633829641353,
+      0.5178292182371753
+    ],
+    "cv_mean": 0.5077500547762791,
+    "cv_std": 0.020671505518478645,
+    "train_r2": 0.5787494972781291,
+    "test_r2": 0.5397542081242219,
+    "train_mse": 0.015701951010481077,
+    "test_mse": 0.017568660249577733,
+    "train_mae": 0.0856908281150415,
+    "test_mae": 0.0928624323764476,
+    "cv_time": 0.2450265884399414,
+    "total_time": 0.4201216697692871,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:10.705292",
+    "model_name": "RandomForest",
+    "config_index": 21,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4077698583227125,
+      0.46371008852823825,
+      0.4456236189520659,
+      0.432831856269582,
+      0.46382672839283356
+    ],
+    "cv_mean": 0.4427524300930865,
+    "cv_std": 0.021041821850933475,
+    "train_r2": 0.47623292029368325,
+    "test_r2": 0.4545037785315219,
+    "train_mse": 0.019523217119769933,
+    "test_mse": 0.020822868892182635,
+    "train_mae": 0.09745443009831617,
+    "test_mae": 0.10282137192340009,
+    "cv_time": 0.35946059226989746,
+    "total_time": 0.6421999931335449,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:11.656497",
+    "model_name": "RandomForest",
+    "config_index": 22,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5105940515069206,
+      0.4926110153289377,
+      0.5664579572374133,
+      0.5125935587157875,
+      0.5155419196575994
+    ],
+    "cv_mean": 0.5195597004893318,
+    "cv_std": 0.024781971969880787,
+    "train_r2": 0.6195522354615145,
+    "test_r2": 0.5566596099785088,
+    "train_mse": 0.01418104458565952,
+    "test_mse": 0.01692334145078965,
+    "train_mae": 0.07897661810134536,
+    "test_mae": 0.08875234715882281,
+    "cv_time": 0.534355640411377,
+    "total_time": 0.9502887725830078,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:13.012521",
+    "model_name": "RandomForest",
+    "config_index": 23,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5244039151399135,
+      0.4876325421486014,
+      0.5719779658012836,
+      0.5252470709186128,
+      0.517228699199256
+    ],
+    "cv_mean": 0.5252980386415335,
+    "cv_std": 0.027068880727796178,
+    "train_r2": 0.6290782894615375,
+    "test_r2": 0.5632988782141903,
+    "train_mse": 0.01382596457444273,
+    "test_mse": 0.016669905026171595,
+    "train_mae": 0.07742774780102878,
+    "test_mae": 0.08765185057631356,
+    "cv_time": 0.7918462753295898,
+    "total_time": 1.355027675628662,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:13.867079",
+    "model_name": "RandomForest",
+    "config_index": 24,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.48512584394557956,
+      0.5060953462495658,
+      0.5427262533899051,
+      0.4978217354604785,
+      0.5211237319515225
+    ],
+    "cv_mean": 0.5105785821994102,
+    "cv_std": 0.019876374791129463,
+    "train_r2": 0.577608609120954,
+    "test_r2": 0.53873191501636,
+    "train_mse": 0.01574447717920171,
+    "test_mse": 0.01760768357277709,
+    "train_mae": 0.08585541988026552,
+    "test_mae": 0.09290962448729177,
+    "cv_time": 0.4680764675140381,
+    "total_time": 0.8526322841644287,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:14.177303",
+    "model_name": "RandomForest",
+    "config_index": 25,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.3892460692251388,
+      0.4472509550678888,
+      0.4275188056685355,
+      0.40926350403301315,
+      0.4448848305338913
+    ],
+    "cv_mean": 0.4236328329056935,
+    "cv_std": 0.02197039376362843,
+    "train_r2": 0.455724794918853,
+    "test_r2": 0.4367569925133561,
+    "train_mse": 0.020287649631711646,
+    "test_mse": 0.0215003052959016,
+    "train_mae": 0.09950943782628932,
+    "test_mae": 0.10393421303681005,
+    "cv_time": 0.17960500717163086,
+    "total_time": 0.309295654296875,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:14.861138",
+    "model_name": "RandomForest",
+    "config_index": 26,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.30054878408841756,
+      0.35770918727930334,
+      0.34193738936713647,
+      0.33889626895443214,
+      0.3535136869413552
+    ],
+    "cv_mean": 0.33852106332612897,
+    "cv_std": 0.020231998997127933,
+    "train_r2": 0.3525980274168534,
+    "test_r2": 0.3418181901588835,
+    "train_mse": 0.024131660358637234,
+    "test_mse": 0.025124341827055204,
+    "train_mae": 0.1100866187186417,
+    "test_mae": 0.11279881592263176,
+    "cv_time": 0.3940281867980957,
+    "total_time": 0.6652224063873291,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:16.045819",
+    "model_name": "RandomForest",
+    "config_index": 27,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5077591281662115,
+      0.49899015958283066,
+      0.5674207599480833,
+      0.5145214684849395,
+      0.5198891605000782
+    ],
+    "cv_mean": 0.5217161353364286,
+    "cv_std": 0.023896785566897723,
+    "train_r2": 0.6107906790899876,
+    "test_r2": 0.5575935076241816,
+    "train_mse": 0.014507628240829934,
+    "test_mse": 0.016887692389496042,
+    "train_mae": 0.0808626299537578,
+    "test_mae": 0.08915205299093959,
+    "cv_time": 0.6581225395202637,
+    "total_time": 1.1836824417114258,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:16.788243",
+    "model_name": "RandomForest",
+    "config_index": 28,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5104254347620585,
+      0.49082731979546934,
+      0.5706273648809803,
+      0.5107564940951193,
+      0.519800498274072
+    ],
+    "cv_mean": 0.5204874223615399,
+    "cv_std": 0.026796051739623506,
+    "train_r2": 0.6131150418071113,
+    "test_r2": 0.5571614643269029,
+    "train_mse": 0.014420988511549986,
+    "test_mse": 0.016904184494447312,
+    "train_mae": 0.08036028764774636,
+    "test_mae": 0.08937609054641335,
+    "cv_time": 0.4093661308288574,
+    "total_time": 0.74049973487854,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:17.230694",
+    "model_name": "RandomForest",
+    "config_index": 29,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.49596822536852625,
+      0.5007816463263816,
+      0.5392037174514941,
+      0.506987804436114,
+      0.5208611126048517
+    ],
+    "cv_mean": 0.5127605012374735,
+    "cv_std": 0.01564391965248469,
+    "train_r2": 0.5811157163988145,
+    "test_r2": 0.5372764876960836,
+    "train_mse": 0.015613751099803227,
+    "test_mse": 0.017663240643714506,
+    "train_mae": 0.08559796401605366,
+    "test_mae": 0.09288331248379711,
+    "cv_time": 0.24428749084472656,
+    "total_time": 0.4415252208709717,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:17.968898",
+    "model_name": "RandomForest",
+    "config_index": 30,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5096588762434875,
+      0.48929169666979433,
+      0.567327498550581,
+      0.5126070946399637,
+      0.5153694137892488
+    ],
+    "cv_mean": 0.518850915978615,
+    "cv_std": 0.02592036365832591,
+    "train_r2": 0.6192582191539976,
+    "test_r2": 0.557452789044157,
+    "train_mse": 0.014192003930816577,
+    "test_mse": 0.01689306394740465,
+    "train_mae": 0.0789704137664813,
+    "test_mae": 0.08868432079778496,
+    "cv_time": 0.41492366790771484,
+    "total_time": 0.7372198104858398,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:18.857948",
+    "model_name": "RandomForest",
+    "config_index": 31,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.50004519560755,
+      0.4967110438709901,
+      0.5543223430283134,
+      0.5056524452332289,
+      0.5115932617980801
+    ],
+    "cv_mean": 0.5136648579076325,
+    "cv_std": 0.020949693912808303,
+    "train_r2": 0.6026556268884793,
+    "test_r2": 0.5514298732928054,
+    "train_mse": 0.014810859193221523,
+    "test_mse": 0.01712297275355814,
+    "train_mae": 0.08218496802270905,
+    "test_mae": 0.09019333924911777,
+    "cv_time": 0.489635705947876,
+    "total_time": 0.8793432712554932,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:19.353615",
+    "model_name": "RandomForest",
+    "config_index": 32,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5063958962846864,
+      0.49502416572079466,
+      0.566514613648653,
+      0.515253339065251,
+      0.5190192724149338
+    ],
+    "cv_mean": 0.5204414574268638,
+    "cv_std": 0.024474441411602054,
+    "train_r2": 0.6082707337279412,
+    "test_r2": 0.5597832157433206,
+    "train_mse": 0.014601558238226443,
+    "test_mse": 0.016804106100017747,
+    "train_mae": 0.08103798179474439,
+    "test_mae": 0.08902450841517189,
+    "cv_time": 0.2714576721191406,
+    "total_time": 0.49360203742980957,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:19.520985",
+    "model_name": "RandomForest",
+    "config_index": 33,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.3164532997220767,
+      0.3775387988898561,
+      0.35920197361354333,
+      0.35526227482551953,
+      0.3661898169584783
+    ],
+    "cv_mean": 0.3549292328018948,
+    "cv_std": 0.020672483603229954,
+    "train_r2": 0.36884983241064895,
+    "test_r2": 0.35833489045816813,
+    "train_mse": 0.023525880557318034,
+    "test_mse": 0.02449386067736432,
+    "train_mae": 0.1079013870736782,
+    "test_mae": 0.11127705900354785,
+    "cv_time": 0.09866952896118164,
+    "total_time": 0.16544556617736816,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:19.803057",
+    "model_name": "RandomForest",
+    "config_index": 34,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.30197594973888475,
+      0.35888357172450025,
+      0.34242332608804626,
+      0.3360567863996142,
+      0.3547617820725042
+    ],
+    "cv_mean": 0.3388202832047099,
+    "cv_std": 0.020173203382368877,
+    "train_r2": 0.35095454383149616,
+    "test_r2": 0.34132996571191154,
+    "train_mse": 0.024192920579282826,
+    "test_mse": 0.02514297849812487,
+    "train_mae": 0.11011237424526767,
+    "test_mae": 0.1126353712237498,
+    "cv_time": 0.16444993019104004,
+    "total_time": 0.28107476234436035,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:21.123524",
+    "model_name": "RandomForest",
+    "config_index": 35,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5227139174922133,
+      0.49513515859289103,
+      0.5692476935382367,
+      0.5310538806073426,
+      0.5195586626285766
+    ],
+    "cv_mean": 0.5275418625718521,
+    "cv_std": 0.0240372444555718,
+    "train_r2": 0.6241214957664223,
+    "test_r2": 0.5507998617751066,
+    "train_mse": 0.014010727159334291,
+    "test_mse": 0.017147021769330036,
+    "train_mae": 0.07876627240489341,
+    "test_mae": 0.0891706463534584,
+    "cv_time": 0.751021146774292,
+    "total_time": 1.3194732666015625,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:21.561126",
+    "model_name": "RandomForest",
+    "config_index": 36,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.32046401615972686,
+      0.3784952218695108,
+      0.3588469634922894,
+      0.3544723290669345,
+      0.3735317688838854
+    ],
+    "cv_mean": 0.3571620598944694,
+    "cv_std": 0.02039554430882948,
+    "train_r2": 0.37215974652499284,
+    "test_r2": 0.3595182864206753,
+    "train_mse": 0.023402504777499337,
+    "test_mse": 0.024448687680732946,
+    "train_mae": 0.10773989019528199,
+    "test_mae": 0.11118197967449678,
+    "cv_time": 0.2391984462738037,
+    "total_time": 0.4176020622253418,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:22.325397",
+    "model_name": "RandomForest",
+    "config_index": 37,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.38781079097424864,
+      0.4480555622456527,
+      0.4329625797464919,
+      0.41146387727423195,
+      0.45507119042987976
+    ],
+    "cv_mean": 0.4270728001341009,
+    "cv_std": 0.024673951872292106,
+    "train_r2": 0.4561897873899917,
+    "test_r2": 0.43808259263442384,
+    "train_mse": 0.02027031721559609,
+    "test_mse": 0.021449704033348123,
+    "train_mae": 0.09967182964126746,
+    "test_mae": 0.10400551895572568,
+    "cv_time": 0.43733882904052734,
+    "total_time": 0.7627627849578857,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:22.620929",
+    "model_name": "RandomForest",
+    "config_index": 38,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5140415233252615,
+      0.47565795562825464,
+      0.5673035668446356,
+      0.5195554376366485,
+      0.5173645087678225
+    ],
+    "cv_mean": 0.5187845984405245,
+    "cv_std": 0.02911736672348672,
+    "train_r2": 0.6171199031508723,
+    "test_r2": 0.5613034545179592,
+    "train_mse": 0.014271708840149753,
+    "test_mse": 0.016746075024011584,
+    "train_mae": 0.07903858386079707,
+    "test_mae": 0.08827225904018994,
+    "cv_time": 0.17073535919189453,
+    "total_time": 0.2945370674133301,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:23.760921",
+    "model_name": "RandomForest",
+    "config_index": 39,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4942996166932836,
+      0.504694808043477,
+      0.5461360870716272,
+      0.5048011945486373,
+      0.5202264091451521
+    ],
+    "cv_mean": 0.5140316231004355,
+    "cv_std": 0.018059905783402882,
+    "train_r2": 0.5856190140715716,
+    "test_r2": 0.5437406368026709,
+    "train_mse": 0.015445892405305884,
+    "test_mse": 0.01741648892656486,
+    "train_mae": 0.08506247619488182,
+    "test_mae": 0.09203878254071911,
+    "cv_time": 0.6952524185180664,
+    "total_time": 1.1390047073364258,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:24.207162",
+    "model_name": "RandomForest",
+    "config_index": 40,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.3016847971134302,
+      0.359425897769015,
+      0.3410237998233341,
+      0.3377547144785463,
+      0.35339603796775987
+    ],
+    "cv_mean": 0.33865704943041713,
+    "cv_std": 0.020109430631394243,
+    "train_r2": 0.35176854084672726,
+    "test_r2": 0.3417446095492128,
+    "train_mse": 0.024162579152570574,
+    "test_mse": 0.025127150571328548,
+    "train_mae": 0.11014186109509279,
+    "test_mae": 0.11264711438054463,
+    "cv_time": 0.27640676498413086,
+    "total_time": 0.4452328681945801,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:25.321300",
+    "model_name": "RandomForest",
+    "config_index": 41,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.49862200497222764,
+      0.49660320258436697,
+      0.5542633335275102,
+      0.505708407461416,
+      0.5122770513832517
+    ],
+    "cv_mean": 0.5134947999857544,
+    "cv_std": 0.021122074905804995,
+    "train_r2": 0.6027950056769403,
+    "test_r2": 0.5502492831458716,
+    "train_mse": 0.014805663902309885,
+    "test_mse": 0.017168038645634945,
+    "train_mae": 0.08223671159656719,
+    "test_mae": 0.0903134177852506,
+    "cv_time": 0.613985538482666,
+    "total_time": 1.1041457653045654,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:26.408273",
+    "model_name": "RandomForest",
+    "config_index": 42,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.4742922440360503,
+      0.5032185776504243,
+      0.5300619997651934,
+      0.48709213019201747,
+      0.5143097292845531
+    ],
+    "cv_mean": 0.5017949361856477,
+    "cv_std": 0.01964812593760828,
+    "train_r2": 0.567151229953647,
+    "test_r2": 0.5288977080343307,
+    "train_mse": 0.016134271979022972,
+    "test_mse": 0.017983078295208208,
+    "train_mae": 0.08737414204207927,
+    "test_mae": 0.09368483203181975,
+    "cv_time": 0.5781130790710449,
+    "total_time": 1.0860445499420166,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:27.100483",
+    "model_name": "RandomForest",
+    "config_index": 43,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5005425522801341,
+      0.49763484425144067,
+      0.550544663811209,
+      0.5118774215889557,
+      0.5197006122903954
+    ],
+    "cv_mean": 0.5160600188444271,
+    "cv_std": 0.01897481281215331,
+    "train_r2": 0.5896771059708535,
+    "test_r2": 0.5367282135748517,
+    "train_mse": 0.015294628585353536,
+    "test_mse": 0.017684169551549382,
+    "train_mae": 0.08436802727046046,
+    "test_mae": 0.09264121954825351,
+    "cv_time": 0.4022023677825928,
+    "total_time": 0.6902847290039062,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:27.359251",
+    "model_name": "RandomForest",
+    "config_index": 44,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5171368234597469,
+      0.48227893434750535,
+      0.5647808687940536,
+      0.5301547713686741,
+      0.5145967741302284
+    ],
+    "cv_mean": 0.5217896344200417,
+    "cv_std": 0.026655967655943528,
+    "train_r2": 0.6138117332022155,
+    "test_r2": 0.5540247811858325,
+    "train_mse": 0.014395019606861053,
+    "test_mse": 0.017023919039311802,
+    "train_mae": 0.0803234295045623,
+    "test_mae": 0.08960714039619436,
+    "cv_time": 0.14913511276245117,
+    "total_time": 0.2567753791809082,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:27.880778",
+    "model_name": "RandomForest",
+    "config_index": 45,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.40105655663430395,
+      0.4656460718154388,
+      0.4367113165830563,
+      0.42109838443304504,
+      0.46190472765763746
+    ],
+    "cv_mean": 0.4372834114246963,
+    "cv_std": 0.024434881283589536,
+    "train_r2": 0.4750056388616787,
+    "test_r2": 0.45554426641242207,
+    "train_mse": 0.019568963564692593,
+    "test_mse": 0.020783151031865357,
+    "train_mae": 0.09731599526429291,
+    "test_mae": 0.10232516905081948,
+    "cv_time": 0.2835702896118164,
+    "total_time": 0.5195353031158447,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:28.385316",
+    "model_name": "RandomForest",
+    "config_index": 46,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.3843413029268513,
+      0.44607301529360244,
+      0.4318239046900013,
+      0.4084494513820438,
+      0.45237187957320424
+    ],
+    "cv_mean": 0.42461191077314064,
+    "cv_std": 0.025164080277864317,
+    "train_r2": 0.4540316520406774,
+    "test_r2": 0.4399150477708421,
+    "train_mse": 0.020350760883461085,
+    "test_mse": 0.02137975492727782,
+    "train_mae": 0.09987722331535871,
+    "test_mae": 0.10400672563142872,
+    "cv_time": 0.2751946449279785,
+    "total_time": 0.4905815124511719,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:28.880660",
+    "model_name": "RandomForest",
+    "config_index": 47,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5091124099662714,
+      0.49033702742952,
+      0.5684288551632918,
+      0.5125629528913507,
+      0.5203158777299066
+    ],
+    "cv_mean": 0.5201514246360681,
+    "cv_std": 0.026073282770764275,
+    "train_r2": 0.6132751002989038,
+    "test_r2": 0.559004271646885,
+    "train_mse": 0.014415022392623843,
+    "test_mse": 0.016833840221274814,
+    "train_mae": 0.0803082982176916,
+    "test_mae": 0.08909854655487427,
+    "cv_time": 0.283052921295166,
+    "total_time": 0.4934215545654297,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:29.066329",
+    "model_name": "RandomForest",
+    "config_index": 48,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.3988305951650729,
+      0.4685057591911186,
+      0.43071070531613387,
+      0.42430851998890506,
+      0.4591351087310006
+    ],
+    "cv_mean": 0.43629813767844616,
+    "cv_std": 0.025050529755256564,
+    "train_r2": 0.4689181177502837,
+    "test_r2": 0.4516894966639753,
+    "train_mse": 0.01979587358058284,
+    "test_mse": 0.02093029662503808,
+    "train_mae": 0.09779858092541029,
+    "test_mae": 0.10250000135593944,
+    "cv_time": 0.10915064811706543,
+    "total_time": 0.18474268913269043,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:29.871492",
+    "model_name": "RandomForest",
+    "config_index": 49,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 12,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5252338527847074,
+      0.48553500374621217,
+      0.572688233301397,
+      0.5264224359520983,
+      0.5155363059836987
+    ],
+    "cv_mean": 0.5250831663536227,
+    "cv_std": 0.02801163492945384,
+    "train_r2": 0.6283602524177201,
+    "test_r2": 0.5643219417339678,
+    "train_mse": 0.013852729130005001,
+    "test_mse": 0.016630852294544324,
+    "train_mae": 0.07757676340128622,
+    "test_mae": 0.08765511998606669,
+    "cv_time": 0.4562675952911377,
+    "total_time": 0.8035519123077393,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:30.749893",
+    "model_name": "RandomForest",
+    "config_index": 50,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.49890700319238723,
+      0.5005991190150771,
+      0.5523029796101375,
+      0.5116653926522996,
+      0.521145423776615
+    ],
+    "cv_mean": 0.5169239836493034,
+    "cv_std": 0.01943326777116846,
+    "train_r2": 0.5908879261728255,
+    "test_r2": 0.535093194005049,
+    "train_mse": 0.015249495726470238,
+    "test_mse": 0.017746582079442803,
+    "train_mae": 0.08427981897662586,
+    "test_mae": 0.0927492980287175,
+    "cv_time": 0.4938492774963379,
+    "total_time": 0.8764762878417969,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:30.876806",
+    "model_name": "XGBoost",
+    "config_index": 1,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.7,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.03,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 5,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.7,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.4018607620157105,
+      0.45881151185548974,
+      0.468118066926519,
+      0.42462753803445474,
+      0.4506249083529188
+    ],
+    "cv_mean": 0.4408085574370185,
+    "cv_std": 0.024269456437015526,
+    "train_r2": 0.47373270617591823,
+    "test_r2": 0.4567140904979784,
+    "train_mse": 0.019616411642599453,
+    "test_mse": 0.020738496105576626,
+    "train_mae": 0.09868564592348653,
+    "test_mae": 0.10173300096019249,
+    "cv_time": 0.08112382888793945,
+    "total_time": 0.11496400833129883,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:31.042991",
+    "model_name": "XGBoost",
+    "config_index": 2,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.6,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.01,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 3,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.6,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.32128159982829496,
+      0.36897255388280426,
+      0.36148955136563254,
+      0.34175933526808544,
+      0.36754183106849214
+    ],
+    "cv_mean": 0.35220897428266185,
+    "cv_std": 0.01826439517418322,
+    "train_r2": 0.3702994526048765,
+    "test_r2": 0.3626519332758532,
+    "train_mse": 0.023471846520262903,
+    "test_mse": 0.0243290690380151,
+    "train_mae": 0.10893046160403108,
+    "test_mae": 0.11030625334433355,
+    "cv_time": 0.11761999130249023,
+    "total_time": 0.16518759727478027,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:31.115747",
+    "model_name": "XGBoost",
+    "config_index": 3,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.6,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.05,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 4,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.6,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.4132538259054519,
+      0.4710488263176511,
+      0.4663876514104477,
+      0.42374767779294664,
+      0.46375973218793276
+    ],
+    "cv_mean": 0.44763954272288603,
+    "cv_std": 0.024135224784737373,
+    "train_r2": 0.4845036344424092,
+    "test_r2": 0.4657392249540373,
+    "train_mse": 0.019214929420299266,
+    "test_mse": 0.020393985577149998,
+    "train_mae": 0.09656642150421549,
+    "test_mae": 0.10023766582875118,
+    "cv_time": 0.042856693267822266,
+    "total_time": 0.07175993919372559,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:31.311679",
+    "model_name": "XGBoost",
+    "config_index": 4,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.7,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.05,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 6,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 150,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.6,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.531763841515609,
+      0.5249551646865733,
+      0.5804447190310902,
+      0.54753692587412,
+      0.5366207228591211
+    ],
+    "cv_mean": 0.5442642747933026,
+    "cv_std": 0.01953080255265936,
+    "train_r2": 0.6175792344782141,
+    "test_r2": 0.5616430166836941,
+    "train_mse": 0.014254587440999134,
+    "test_mse": 0.016733113140538207,
+    "train_mae": 0.07963034379110244,
+    "test_mae": 0.08824263545058952,
+    "cv_time": 0.12118268013000488,
+    "total_time": 0.1939387321472168,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:31.465165",
+    "model_name": "XGBoost",
+    "config_index": 5,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.7,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.01,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 5,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.7,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.3397010405671237,
+      0.3919701123339904,
+      0.39906726504372847,
+      0.35715631814111326,
+      0.384795617321285
+    ],
+    "cv_mean": 0.3745380706814482,
+    "cv_std": 0.02247896218185665,
+    "train_r2": 0.4019922626495702,
+    "test_r2": 0.38770737178840586,
+    "train_mse": 0.02229050917469105,
+    "test_mse": 0.02337264424413012,
+    "train_mae": 0.10678932649057635,
+    "test_mae": 0.10866028845354182,
+    "cv_time": 0.1036529541015625,
+    "total_time": 0.15248918533325195,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:31.700458",
+    "model_name": "XGBoost",
+    "config_index": 6,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.6,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.03,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 4,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.6,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.4794890588112304,
+      0.5224523085546644,
+      0.5338760687179884,
+      0.4966825789710586,
+      0.5152899230010229
+    ],
+    "cv_mean": 0.509557987611193,
+    "cv_std": 0.019289397561618037,
+    "train_r2": 0.5534894749764574,
+    "test_r2": 0.5178034934403546,
+    "train_mse": 0.01664350865882027,
+    "test_mse": 0.018406570460433872,
+    "train_mae": 0.08845426007196379,
+    "test_mae": 0.09430243536768729,
+    "cv_time": 0.13159847259521484,
+    "total_time": 0.20686984062194824,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:31.916273",
+    "model_name": "XGBoost",
+    "config_index": 7,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.6,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.01,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 4,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.7,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.3855475182819683,
+      0.44568538235205435,
+      0.44015904397648653,
+      0.4047716486389943,
+      0.4418437123018799
+    ],
+    "cv_mean": 0.42360146111027674,
+    "cv_std": 0.02407196401960512,
+    "train_r2": 0.4521251996518759,
+    "test_r2": 0.4359021855543411,
+    "train_mse": 0.02042182316545091,
+    "test_mse": 0.021532935280372943,
+    "train_mae": 0.10032693644026784,
+    "test_mae": 0.10333816571293937,
+    "cv_time": 0.14604806900024414,
+    "total_time": 0.2138206958770752,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:32.085813",
+    "model_name": "XGBoost",
+    "config_index": 8,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.6,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.05,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 6,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.6,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.503309757321965,
+      0.5294282599030697,
+      0.571663325647915,
+      0.5241335477425336,
+      0.5330758289336082
+    ],
+    "cv_mean": 0.5323221439098182,
+    "cv_std": 0.022205597803362426,
+    "train_r2": 0.5894241668301317,
+    "test_r2": 0.5438104255827194,
+    "train_mse": 0.01530405679486447,
+    "test_mse": 0.0174138249253126,
+    "train_mae": 0.08360069095129892,
+    "test_mae": 0.09054296418797386,
+    "cv_time": 0.11372661590576172,
+    "total_time": 0.16754651069641113,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:32.250262",
+    "model_name": "XGBoost",
+    "config_index": 9,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.7,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.01,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 3,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 200,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.7,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.3647972909835926,
+      0.41446083700181446,
+      0.40028930991671696,
+      0.3848333499625074,
+      0.41091399648642335
+    ],
+    "cv_mean": 0.3950589568702109,
+    "cv_std": 0.01830575475487458,
+    "train_r2": 0.4192511409855182,
+    "test_r2": 0.4106829003958907,
+    "train_mse": 0.02164719110058579,
+    "test_mse": 0.022495614484630867,
+    "train_mae": 0.10348523066864591,
+    "test_mae": 0.10578318615619031,
+    "cv_time": 0.10465168952941895,
+    "total_time": 0.16245627403259277,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:32.356414",
+    "model_name": "XGBoost",
+    "config_index": 10,
+    "parameters": {
+      "objective": "reg:squarederror",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.7,
+      "device": null,
+      "early_stopping_rounds": null,
+      "enable_categorical": false,
+      "eval_metric": null,
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.01,
+      "max_bin": null,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 3,
+      "max_leaves": null,
+      "min_child_weight": null,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "num_parallel_tree": null,
+      "random_state": 42,
+      "reg_alpha": null,
+      "reg_lambda": null,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.6,
+      "tree_method": null,
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "cv_scores": [
+      0.2866909725356478,
+      0.3219259477286326,
+      0.31871353349615517,
+      0.3042360332232278,
+      0.3193343939810376
+    ],
+    "cv_mean": 0.3101801761929402,
+    "cv_std": 0.01327898010573909,
+    "train_r2": 0.3280534208843997,
+    "test_r2": 0.32100242178234184,
+    "train_mse": 0.02504655115842004,
+    "test_mse": 0.025918928478137652,
+    "train_mae": 0.11367706290898368,
+    "test_mae": 0.11497298488669518,
+    "cv_time": 0.06329512596130371,
+    "total_time": 0.10415816307067871,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  }
+]

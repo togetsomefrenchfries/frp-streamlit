@@ -1,0 +1,257 @@
+[
+  {
+    "timestamp": "2025-09-21T04:02:59.720460",
+    "model_name": "RandomForest",
+    "config_index": 1,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.320472750182059,
+      0.37788974446858237,
+      0.3606526950340674,
+      0.3550222495035207,
+      0.3741854015193363
+    ],
+    "cv_mean": 0.3576445681415132,
+    "cv_std": 0.020401645846346326,
+    "train_r2": 0.37294942784970286,
+    "test_r2": 0.3599377032310628,
+    "train_mse": 0.023373069708830293,
+    "test_mse": 0.024432677558370655,
+    "train_mae": 0.10769061467404371,
+    "test_mae": 0.11112498663196754,
+    "cv_time": 2.1407132148742676,
+    "total_time": 2.449381113052368,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:00.896072",
+    "model_name": "RandomForest",
+    "config_index": 2,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5126351307880648,
+      0.4897785990952672,
+      0.5599882817132804,
+      0.5247711882452621,
+      0.5103402759563522
+    ],
+    "cv_mean": 0.5195026951596453,
+    "cv_std": 0.023158043919485623,
+    "train_r2": 0.6092285403785633,
+    "test_r2": 0.5636704292089576,
+    "train_mse": 0.01456585636248171,
+    "test_mse": 0.016655722054142987,
+    "train_mae": 0.0812723441564773,
+    "test_mae": 0.08884834267395983,
+    "cv_time": 1.0738816261291504,
+    "total_time": 1.1746165752410889,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:01.045727",
+    "model_name": "RandomForest",
+    "config_index": 3,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 50,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.300628219445658,
+      0.3582651711820146,
+      0.34318787235989234,
+      0.3323803220177546,
+      0.3494906415542057
+    ],
+    "cv_mean": 0.3367904453119051,
+    "cv_std": 0.01995265233343526,
+    "train_r2": 0.3447689605581745,
+    "test_r2": 0.3358372177753314,
+    "train_mse": 0.024423485824668602,
+    "test_mse": 0.025352649556584853,
+    "train_mae": 0.1105521141012657,
+    "test_mae": 0.11303329070359715,
+    "cv_time": 0.08870983123779297,
+    "total_time": 0.14870548248291016,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:02.249402",
+    "model_name": "RandomForest",
+    "config_index": 4,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 250,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.517153899278474,
+      0.4973823884836259,
+      0.5678581704559328,
+      0.5246279975333983,
+      0.5207898017019745
+    ],
+    "cv_mean": 0.5255624514906811,
+    "cv_std": 0.023140436185942935,
+    "train_r2": 0.6180555005374992,
+    "test_r2": 0.5612348689944604,
+    "train_mse": 0.014236834806206937,
+    "test_mse": 0.016748693094142064,
+    "train_mae": 0.07985517250596649,
+    "test_mae": 0.08878476670462311,
+    "cv_time": 0.6830651760101318,
+    "total_time": 1.2026793956756592,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-21T04:03:02.697179",
+    "model_name": "RandomForest",
+    "config_index": 5,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cv_scores": [
+      0.5022647427268081,
+      0.4939335368556418,
+      0.5504405257642977,
+      0.5082143360068714,
+      0.509971421992192
+    ],
+    "cv_mean": 0.5129649126691622,
+    "cv_std": 0.019558309968217644,
+    "train_r2": 0.6029126354009813,
+    "test_r2": 0.5538826573627115,
+    "train_mse": 0.014801279299437404,
+    "test_mse": 0.017029344238641945,
+    "train_mae": 0.08196327160786307,
+    "test_mae": 0.09009379414252722,
+    "cv_time": 0.24373316764831543,
+    "total_time": 0.4457824230194092,
+    "data_shape": {
+      "train": [
+        2176,
+        8
+      ],
+      "test": [
+        544,
+        8
+      ]
+    }
+  }
+]

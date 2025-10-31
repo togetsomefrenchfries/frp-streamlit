@@ -1,0 +1,18 @@
+{
+  "timestamp": "20250921_012600",
+  "strategy": "7_2_1",
+  "experiment_type": "demo_test",
+  "folder_name": "20250921_012600_7_2_1_demo_test",
+  "created_at": "2025-09-21T01:26:00.405942",
+  "description": "7_2_1策略的demo_test实验结果",
+  "saved_files": [
+    "result\\20250921_012600_7_2_1_demo_test\\demo_comparison_20250921_012559.png",
+    "result\\20250921_012600_7_2_1_demo_test\\demo_results_20250921_012559.csv",
+    "result\\20250921_012600_7_2_1_demo_test\\demo_summary_20250921_012559.txt"
+  ],
+  "file_descriptions": {
+    "demo_comparison_*.png": "7:2:1策略图表",
+    "demo_results_*.csv": "7:2:1实验数据",
+    "demo_summary_*.txt": "7:2:1结果摘要"
+  }
+}

@@ -1,0 +1,21 @@
+# 依赖包列表
+pandas>=1.3.0
+numpy>=1.20.0
+scikit-learn>=1.0.0
+
+# 可选高级算法 (推荐安装)
+xgboost>=1.5.0
+lightgbm>=3.0.0
+
+# 数据处理工具
+openpyxl>=3.0.9
+
+# 可选数据库支持
+sqlalchemy>=1.4.0
+
+# 可选绘图工具
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# 其他工具
+tqdm>=4.60.0

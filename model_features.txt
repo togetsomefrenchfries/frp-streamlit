@@ -1,0 +1,18 @@
+FRP测试模型特征说明
+==================
+
+这是一个用于演示的简单FRP耐久性预测模型
+
+期望特征（按顺序）：
+1. pH
+2. Fiber_content_wt
+3. Diameter_mm
+4. Temp_C
+5. Duration_hours
+
+特征说明：
+- pH: 溶液pH值 (通常6-8)
+- Fiber_content_wt: 纤维重量含量 (0-1)
+- Diameter_mm: 钢筋直径(mm) (8-20)
+- Temp_C: 环境温度(°C) (20-80)
+- Duration_hours: 暴露时间(小时) (0-1000)

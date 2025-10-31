@@ -8,7 +8,6 @@
 """
 
 import pandas as pd
-import mysql.connector
 from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
@@ -24,13 +23,13 @@ LOCAL_DB_CONFIG = {
     'database': 'haigui_database'
 }
 
-# Railway数据库配置（需要填入实际信息）
+# Railway数据库配置（已填入实际信息）
 RAILWAY_DB_CONFIG = {
-    'host': 'YOUR_RAILWAY_HOST',  # 例如：containers-us-west-xxx.railway.app
-    'port': 3306,
-    'user': 'YOUR_RAILWAY_USER',  # 例如：root
-    'password': 'YOUR_RAILWAY_PASSWORD',  # Railway生成的密码
-    'database': 'railway'  # Railway默认数据库名
+    'host': 'hopper.proxy.rlwy.net',
+    'port': 56566,
+    'user': 'root',
+    'password': 'KujjHdzcQMKuTMoHEOzjRoKIvTKWBfBJ',
+    'database': 'railway'
 }
 
 def export_from_local():

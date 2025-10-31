@@ -70,6 +70,12 @@ def _load_db_config_from_env_or_secrets():
     云端优先读 st.secrets， 本地用环境变量（.env）
     支持 DB_HOST 写成 'host:port'
     """
+    # 确保.env文件被加载，指定正确路径并强制覆盖
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    env_path = os.path.join(script_dir, '.env')
+    load_dotenv(env_path, override=True)  # 强制覆盖现有环境变量
+    
     def _get(key, default=None):
         # 先 secrets，再环境变量
         if hasattr(st, "secrets") and key in st.secrets:
@@ -78,8 +84,10 @@ def _load_db_config_from_env_or_secrets():
 
     host_raw = _get("DB_HOST", "localhost")         # e.g. shortline.proxy.rlwy.net:12150
     user     = _get("DB_USER", "root")
-    pwd      = _get("DB_PASSWORD", "666666")
+    pwd      = _get("DB_PASSWORD", "")
     dbname   = _get("DB_NAME", "haigui_database")
+    
+
 
     host = host_raw
     port = _get("DB_PORT")  # 可选；多数情况下不用单独给
@@ -99,7 +107,12 @@ def get_db_engine():
     from sqlalchemy.pool import QueuePool
 
     host, port, user, pwd, dbname = _load_db_config_from_env_or_secrets()
-    url = f"mysql+pymysql://{user}:{pwd}@{host}:{port}/{dbname}?charset=utf8mb4"
+    # 处理空密码的情况
+    if pwd:
+        url = f"mysql+pymysql://{user}:{pwd}@{host}:{port}/{dbname}?charset=utf8mb4"
+    else:
+        url = f"mysql+pymysql://{user}@{host}:{port}/{dbname}?charset=utf8mb4"
+    
 
     engine = create_engine(
         url,
@@ -2305,7 +2318,7 @@ def create_tables(engine):
             )
         """))
 
-        conn.commit()
+        # conn.commit()  # SQLAlchemy连接自动提交DDL
 
 # ——————————————————————————————
 # 8. Initialize Administrator Account
@@ -2334,7 +2347,7 @@ def initialize_admin(engine):
                         "institution": admin_institution
                     }
                 )
-                conn.commit()
+                # SQLAlchemy自动提交INSERT语句
                 return True, admin_email, "created"
             else:
                 existing_email = result._asdict()['email'] if hasattr(result, '_asdict') else result[0]
@@ -2350,7 +2363,7 @@ def initialize_admin(engine):
                     """),
                     {"email": admin_email}
                 )
-                conn.commit()
+                # SQLAlchemy自动提交UPDATE语句
                 return True, admin_email, "upgraded"
             else:
                 print(f"Administrator initialization failed: {e}")
@@ -2401,22 +2414,24 @@ def request_access(name, email, institution, ip_address, engine):
 
 def log_operation(user_email, operation_type, table_name, record_id, details, ip_address, engine):
     """Record operation log"""
-    with engine.connect() as conn:
-        conn.execute(
-            text("""
-                INSERT INTO operation_logs (user_email, operation_type, table_name, record_id, details, ip_address)
-                VALUES (:email, :op_type, :table, :record_id, :details, :ip)
-            """),
-            {
-                "email": user_email,
-                "op_type": operation_type,
-                "table": table_name,
-                "record_id": record_id,
-                "details": json.dumps(details) if isinstance(details, dict) else details,
-                "ip": ip_address
-            }
-        )
-        conn.commit()
+    try:
+        with engine.begin() as conn:
+            conn.execute(
+                text("""
+                    INSERT INTO operation_logs (user_email, operation_type, table_name, record_id, details, ip_address)
+                    VALUES (:email, :op_type, :table, :record_id, :details, :ip)
+                """),
+                {
+                    "email": user_email,
+                    "op_type": operation_type,
+                    "table": table_name,
+                    "record_id": record_id,
+                    "details": json.dumps(details) if isinstance(details, dict) else details,
+                    "ip": ip_address
+                }
+            )
+    except Exception as e:
+        print(f"日志记录错误: {e}")
 
 # ——————————————————————————————
 # 10. Data Change Request and Approval
@@ -8127,6 +8142,195 @@ if __name__ == "__main__":
                     else:
                         st.session_state.random_seed = None
                         st.info("Random seed disabled - results will vary each run")
+                    
+                    # Custom Model Import Section
+                    st.markdown("---")
+                    st.markdown("#### Custom Model Import")
+                    
+                    # Initialize custom model session state
+                    if "custom_models" not in st.session_state:
+                        st.session_state.custom_models = {}
+                    if "use_custom_model" not in st.session_state:
+                        st.session_state.use_custom_model = False
+                    
+                    # Toggle for custom model usage
+                    use_custom_model = st.checkbox("Use Custom Pre-trained Model", 
+                                                   value=st.session_state.use_custom_model,
+                                                   help="Upload and use your own pre-trained machine learning model")
+                    st.session_state.use_custom_model = use_custom_model
+                    
+                    if use_custom_model:
+                        st.markdown("""
+                        <div style="background: #fff3cd; padding: 0.75rem; border-radius: 6px; border-left: 4px solid #ffc107; margin: 1rem 0;">
+                            <strong style="color: #856404;">Custom Model Mode</strong><br>
+                            <small>Upload your pre-trained model files (pickle format)</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+                        
+                        # Model file upload
+                        uploaded_model = st.file_uploader(
+                            "Upload Model File (.pkl)",
+                            type=['pkl', 'pickle'],
+                            help="Upload your trained model in pickle format",
+                            key="custom_model_upload"
+                        )
+                        
+                        # Preprocessor upload (optional)
+                        uploaded_preprocessor = st.file_uploader(
+                            "Upload Preprocessor File (.pkl) - Optional",
+                            type=['pkl', 'pickle'],
+                            help="Upload custom preprocessor/scaler if needed",
+                            key="custom_preprocessor_upload"
+                        )
+                        
+                        # Model configuration
+                        col_name, col_type = st.columns(2)
+                        with col_name:
+                            model_name = st.text_input("Model Name", 
+                                                     placeholder="Enter custom model name",
+                                                     help="Give your model a descriptive name")
+                        
+                        with col_type:
+                            model_type = st.selectbox("Model Type",
+                                                    options=[
+                                                        "Regression", 
+                                                        "Classification",
+                                                        "Random Forest", 
+                                                        "XGBoost", 
+                                                        "LightGBM", 
+                                                        "Decision Tree",
+                                                        "Extra Trees",
+                                                        "Gradient Boosting",
+                                                        "AdaBoost",
+                                                        "Neural Network (MLP)",
+                                                        "Support Vector Machine",
+                                                        "Linear Model",
+                                                        "Ensemble Model"
+                                                    ],
+                                                    help="Specify the type/algorithm of your model")
+                        
+                        # Feature configuration
+                        st.markdown("**Feature Configuration:**")
+                        expected_features = st.text_area(
+                            "Expected Feature Names (one per line)",
+                            placeholder="pH\nFiber_content_wt\nDiameter_mm\nTemp_C\nDuration_hours",
+                            help="List the feature names your model expects, one per line",
+                            height=100
+                        )
+                        
+                        # Model validation and saving
+                        if uploaded_model is not None and model_name:
+                            if st.button("Validate and Save Custom Model", type="primary"):
+                                try:
+                                    # Load and validate the model
+                                    import pickle
+                                    import io
+                                    
+                                    # Read the uploaded model
+                                    model_bytes = uploaded_model.read()
+                                    model = pickle.loads(model_bytes)
+                                    
+                                    # Enhanced model validation
+                                    if not hasattr(model, 'predict'):
+                                        st.error("Invalid model: Model must have a 'predict' method")
+                                    else:
+                                        # Model type detection and validation
+                                        model_class_name = model.__class__.__name__
+                                        detected_type = "Unknown"
+                                        
+                                        # Tree models
+                                        if any(x in model_class_name for x in ['RandomForest', 'ExtraTrees', 'DecisionTree']):
+                                            detected_type = "Tree Model"
+                                        # Boosting models  
+                                        elif any(x in model_class_name for x in ['XGB', 'LightGBM', 'LGBM', 'GradientBoosting', 'AdaBoost']):
+                                            detected_type = "Boosting Model"
+                                        # Neural networks
+                                        elif any(x in model_class_name for x in ['MLP', 'Neural', 'MLPRegressor', 'MLPClassifier']):
+                                            detected_type = "Neural Network"
+                                        # SVM
+                                        elif any(x in model_class_name for x in ['SV', 'SVR', 'SVC']):
+                                            detected_type = "Support Vector Machine"
+                                        # Linear models
+                                        elif any(x in model_class_name for x in ['Linear', 'Ridge', 'Lasso', 'Elastic']):
+                                            detected_type = "Linear Model"
+                                        
+                                        # Parse expected features
+                                        feature_list = []
+                                        if expected_features:
+                                            feature_list = [f.strip() for f in expected_features.split('\n') if f.strip()]
+                                        
+                                        # Load preprocessor if provided
+                                        preprocessor = None
+                                        if uploaded_preprocessor is not None:
+                                            prep_bytes = uploaded_preprocessor.read()
+                                            preprocessor = pickle.loads(prep_bytes)
+                                        
+                                        # Recommend preprocessor for certain model types
+                                        needs_preprocessing = model_type in ['Neural Network (MLP)', 'Support Vector Machine', 'Linear Model']
+                                        if needs_preprocessing and preprocessor is None:
+                                            st.warning(f"⚠️ {model_type} typically requires data preprocessing. Consider uploading a preprocessor for better results.")
+                                        
+                                        # Save to session state
+                                        custom_model_config = {
+                                            'model': model,
+                                            'preprocessor': preprocessor,
+                                            'name': model_name,
+                                            'type': model_type,
+                                            'detected_type': detected_type,
+                                            'model_class': model_class_name,
+                                            'expected_features': feature_list,
+                                            'needs_preprocessing': needs_preprocessing,
+                                            'upload_time': pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
+                                        }
+                                        
+                                        st.session_state.custom_models[model_name] = custom_model_config
+                                        st.session_state.selected_model = f"Custom: {model_name}"
+                                        
+                                        st.success(f"✅ Custom model '{model_name}' loaded successfully!")
+                                        st.info(f"Expected features: {len(feature_list) if feature_list else 'Auto-detect'}")
+                                        
+                                        # Reset file uploaders
+                                        uploaded_model.seek(0)
+                                        if uploaded_preprocessor:
+                                            uploaded_preprocessor.seek(0)
+                                
+                                except Exception as e:
+                                    st.error(f"❌ Failed to load model: {str(e)}")
+                        
+                        # Show loaded custom models
+                        if st.session_state.custom_models:
+                            st.markdown("**Loaded Custom Models:**")
+                            for name, config in st.session_state.custom_models.items():
+                                with st.expander(f"📁 {name}", expanded=False):
+                                    col_info, col_action = st.columns([3, 1])
+                                    
+                                    with col_info:
+                                        st.write(f"**Type:** {config['type']}")
+                                        if config.get('detected_type'):
+                                            st.write(f"**Detected:** {config['detected_type']}")
+                                        if config.get('model_class'):
+                                            st.write(f"**Class:** {config['model_class']}")
+                                        st.write(f"**Uploaded:** {config['upload_time']}")
+                                        st.write(f"**Features:** {len(config['expected_features']) if config['expected_features'] else 'Auto-detect'}")
+                                        preprocessor_status = "✅ Included" if config['preprocessor'] else "❌ Not provided"
+                                        if config.get('needs_preprocessing') and not config['preprocessor']:
+                                            preprocessor_status += " ⚠️ Recommended"
+                                        st.write(f"**Preprocessor:** {preprocessor_status}")
+                                        
+                                        if config['expected_features']:
+                                            st.write("**Expected Features:**")
+                                            st.code(', '.join(config['expected_features'][:5]) + 
+                                                   ('...' if len(config['expected_features']) > 5 else ''))
+                                    
+                                    with col_action:
+                                        if st.button("Use", key=f"use_custom_{name}"):
+                                            st.session_state.selected_model = f"Custom: {name}"
+                                            st.success(f"Selected: {name}")
+                                        
+                                        if st.button("Delete", key=f"del_custom_{name}"):
+                                            del st.session_state.custom_models[name]
+                                            st.rerun()
+                
                 # 对于非admin用户，完全不显示任何内容
         
         # Third row: Parameter Optimization and Configuration Status (只对admin用户可见)
@@ -8644,6 +8848,47 @@ if "authenticated_user" in st.session_state and st.session_state["authenticated_
         
         # Training button
         if st.button("Start Training", type="primary", use_container_width=True):
+            # Check if using custom model
+            selected_model = st.session_state.get("selected_model", "")
+            use_custom_model = st.session_state.get("use_custom_model", False)
+            
+            # Handle custom model case
+            if use_custom_model and selected_model.startswith("Custom: "):
+                custom_model_name = selected_model.replace("Custom: ", "")
+                
+                if custom_model_name not in st.session_state.get("custom_models", {}):
+                    st.error("❌ Selected custom model not found. Please re-upload the model.")
+                    st.stop()
+                
+                # Use custom model directly for predictions
+                custom_model_config = st.session_state.custom_models[custom_model_name]
+                st.session_state.trained_model = custom_model_config['model']
+                st.session_state.trained_preprocessor = custom_model_config.get('preprocessor', None)
+                st.session_state.model_type = custom_model_config['type']
+                st.session_state.custom_model_name = custom_model_name
+                st.session_state.expected_features = custom_model_config.get('expected_features', [])
+                
+                st.success(f"✅ Custom model '{custom_model_name}' is ready for predictions!")
+                st.info("Custom models skip the training process. You can now use the Predictions tab.")
+                
+                # Show model info
+                with st.expander("Custom Model Information", expanded=True):
+                    col_info1, col_info2 = st.columns(2)
+                    with col_info1:
+                        st.write(f"**Model Name:** {custom_model_name}")
+                        st.write(f"**Model Type:** {custom_model_config['type']}")
+                        st.write(f"**Upload Time:** {custom_model_config['upload_time']}")
+                    
+                    with col_info2:
+                        st.write(f"**Preprocessor:** {'✅ Available' if custom_model_config.get('preprocessor') else '❌ Not provided'}")
+                        st.write(f"**Expected Features:** {len(custom_model_config.get('expected_features', []))}")
+                        if custom_model_config.get('expected_features'):
+                            st.write("**Feature List:**")
+                            st.code('\n'.join(custom_model_config['expected_features'][:10]))
+                
+                st.stop()  # Skip normal training process
+            
+            # Normal training process for built-in models
             # Get evaluation strategy
             eval_strategy = st.session_state.get("evaluation_strategy", "Fixed Test Set (Recommended)")
             
@@ -10652,6 +10897,7 @@ with tabs[tab_indexes["predictions"]]:
         
         # 检查可用的模型
         has_current_model = "trained_model" in st.session_state
+        has_custom_models = bool(st.session_state.get("custom_models", {}))
         
         try:
             model_cache_manager = ModelCacheManager(engine)
@@ -10661,17 +10907,26 @@ with tabs[tab_indexes["predictions"]]:
             cached_models = []
             has_cached_models = False
         
-        if not has_current_model and not has_cached_models:
-            st.warning("No trained models available. Please train a model first in the Model Training tab.")
+        if not has_current_model and not has_cached_models and not has_custom_models:
+            st.warning("No trained models available. Please train a model first in the Model Training tab or upload a custom model in the Model Configuration tab.")
             st.stop()
         
         # 模型选择选项
         model_source_options = []
+        
+        # Current session model
         if has_current_model:
             current_model_name = st.session_state.get("selected_model", "Current Model")
             current_target = st.session_state.get("selected_target", "Unknown Target")
             model_source_options.append(f"Current Session Model ({current_model_name} - {current_target})")
         
+        # Custom models
+        if has_custom_models:
+            for custom_name, custom_config in st.session_state.custom_models.items():
+                custom_info = f"Custom Model: {custom_name} ({custom_config['type']})"
+                model_source_options.append(custom_info)
+        
+        # Cached models
         if has_cached_models:
             for model in cached_models:
                 model_info = f"Cached: {model['model_name']} - {model['target_variable']} ({model['model_key']})"
@@ -10680,7 +10935,7 @@ with tabs[tab_indexes["predictions"]]:
         selected_model_source = st.selectbox(
             "Select model to use for predictions:",
             model_source_options,
-            help="Choose between current session model or previously cached models"
+            help="Choose between current session model, custom uploaded models, or previously cached models"
         )
     else:
         # 对于非admin用户，直接使用Model Configuration中选择的模型
@@ -10701,6 +10956,154 @@ with tabs[tab_indexes["predictions"]]:
         training_data_type = st.session_state.get("training_data_type", "advanced_preprocessing_dataset")
         
         st.success(f"Using current session model: {model_name} for {model_target}")
+    
+    elif selected_model_source.startswith("Custom Model:"):
+        # 使用自定义模型
+        custom_model_name = selected_model_source.split("Custom Model: ")[1].split(" (")[0]
+        
+        if custom_model_name not in st.session_state.get("custom_models", {}):
+            st.error("❌ Custom model not found. Please re-upload the model.")
+            st.stop()
+        
+        custom_config = st.session_state.custom_models[custom_model_name]
+        model_to_use = custom_config['model']
+        model_target = f"Custom ({custom_config['type']})"
+        model_name = custom_model_name
+        training_feature_info = {}  # Custom models manage their own feature processing
+        training_data_type = "custom_model"
+        
+        # Show custom model info
+        st.success(f"Using custom model: {model_name}")
+        
+        # Custom model prediction interface
+        with st.expander("Custom Model Information", expanded=False):
+            col_info1, col_info2 = st.columns(2)
+            with col_info1:
+                st.write(f"**Model Type:** {custom_config['type']}")
+                st.write(f"**Upload Time:** {custom_config['upload_time']}")
+            with col_info2:
+                st.write(f"**Preprocessor:** {'✅ Available' if custom_config.get('preprocessor') else '❌ Not provided'}")
+                st.write(f"**Expected Features:** {len(custom_config.get('expected_features', []))}")
+        
+        # Feature input for custom models
+        st.markdown("#### Feature Input for Custom Model")
+        
+        expected_features = custom_config.get('expected_features', [])
+        if expected_features:
+            st.info(f"This model expects {len(expected_features)} features. Please provide values for each feature:")
+            
+            # Create input fields for each expected feature
+            custom_input_data = {}
+            
+            # Organize features in columns for better layout
+            num_cols = 3
+            feature_chunks = [expected_features[i:i + num_cols] for i in range(0, len(expected_features), num_cols)]
+            
+            for chunk in feature_chunks:
+                cols = st.columns(len(chunk))
+                for i, feature in enumerate(chunk):
+                    with cols[i]:
+                        # Try to infer input type based on feature name
+                        if any(keyword in feature.lower() for keyword in ['ph', 'temp', 'diameter', 'content', 'concentration', 'duration', 'hours']):
+                            # Numeric input
+                            custom_input_data[feature] = st.number_input(
+                                feature.replace('_', ' ').title(),
+                                value=0.0,
+                                key=f"custom_{feature}"
+                            )
+                        else:
+                            # Text input for categorical features
+                            custom_input_data[feature] = st.text_input(
+                                feature.replace('_', ' ').title(),
+                                value="",
+                                key=f"custom_{feature}"
+                            )
+            
+            # Prediction button for custom model
+            if st.button("Make Prediction with Custom Model", type="primary"):
+                try:
+                    # Prepare input data
+                    import pandas as pd
+                    input_df = pd.DataFrame([custom_input_data])
+                    
+                    # Apply custom preprocessor if available
+                    if custom_config.get('preprocessor'):
+                        try:
+                            processed_input = custom_config['preprocessor'].transform(input_df)
+                        except Exception as e:
+                            st.warning(f"Custom preprocessor failed: {e}")
+                            processed_input = input_df
+                    else:
+                        processed_input = input_df
+                    
+                    # Make prediction
+                    prediction = model_to_use.predict(processed_input)
+                    
+                    # Display results
+                    st.success("✅ Prediction completed!")
+                    
+                    col_result1, col_result2 = st.columns(2)
+                    with col_result1:
+                        st.metric("Prediction Result", f"{prediction[0]:.4f}")
+                    
+                    with col_result2:
+                        st.write("**Model Type:**", custom_config['type'])
+                    
+                    # Show input summary
+                    with st.expander("Input Summary", expanded=False):
+                        st.json(custom_input_data)
+                
+                except Exception as e:
+                    st.error(f"❌ Prediction failed: {str(e)}")
+                    st.error("Please check your input values and model compatibility.")
+        
+        else:
+            st.warning("⚠️ This custom model doesn't specify expected features. You may need to prepare input data manually.")
+            
+            # File upload option for custom input
+            st.markdown("**Upload Input Data:**")
+            uploaded_input = st.file_uploader(
+                "Upload CSV file with input data",
+                type=['csv'],
+                help="Upload a CSV file with the features your model expects"
+            )
+            
+            if uploaded_input is not None:
+                try:
+                    input_df = pd.read_csv(uploaded_input)
+                    st.write("**Input Data Preview:**")
+                    st.dataframe(input_df.head())
+                    
+                    if st.button("Make Predictions", type="primary"):
+                        # Apply preprocessor if available
+                        if custom_config.get('preprocessor'):
+                            processed_input = custom_config['preprocessor'].transform(input_df)
+                        else:
+                            processed_input = input_df
+                        
+                        # Make predictions
+                        predictions = model_to_use.predict(processed_input)
+                        
+                        # Show results
+                        result_df = input_df.copy()
+                        result_df['Prediction'] = predictions
+                        
+                        st.success("✅ Predictions completed!")
+                        st.dataframe(result_df)
+                        
+                        # Download results
+                        csv_result = result_df.to_csv(index=False)
+                        st.download_button(
+                            "Download Results",
+                            csv_result,
+                            file_name=f"predictions_{custom_model_name}.csv",
+                            mime="text/csv"
+                        )
+                
+                except Exception as e:
+                    st.error(f"❌ Error processing input file: {str(e)}")
+        
+        st.stop()  # Skip the rest of the normal prediction interface for custom models
         
     elif selected_model_source == "auto_selected":
         # 对于非admin用户，使用Model Configuration中选择的模型

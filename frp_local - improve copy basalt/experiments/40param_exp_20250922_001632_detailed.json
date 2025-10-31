@@ -1,0 +1,278 @@
+{
+  "experiment_id": "20250922_001632",
+  "timestamp": "2025-09-22T00:16:55.939623",
+  "total_configs": 27,
+  "data_filter": "Comments=1",
+  "results": [
+    {
+      "model": "RandomForest",
+      "config_id": 1,
+      "config": "{'n_estimators': 50, 'max_depth': 5, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 2,
+      "config": "{'n_estimators': 100, 'max_depth': 7, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 3,
+      "config": "{'n_estimators': 100, 'max_depth': 10, 'min_samples_split': 3, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 4,
+      "config": "{'n_estimators': 150, 'max_depth': 8, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 5,
+      "config": "{'n_estimators': 200, 'max_depth': 6, 'min_samples_split': 4, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 6,
+      "config": "{'n_estimators': 200, 'max_depth': 12, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 7,
+      "config": "{'n_estimators': 300, 'max_depth': 9, 'min_samples_split': 3, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 8,
+      "config": "{'n_estimators': 100, 'max_depth': 15, 'min_samples_split': 5, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 9,
+      "config": "{'n_estimators': 150, 'max_depth': 4, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 10,
+      "config": "{'n_estimators': 250, 'max_depth': 7, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 11,
+      "config": "{'n_estimators': 100, 'max_depth': 20, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 12,
+      "config": "{'n_estimators': 300, 'max_depth': 5, 'min_samples_split': 6, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 13,
+      "config": "{'n_estimators': 400, 'max_depth': 8, 'min_samples_split': 3, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 14,
+      "config": "{'n_estimators': 500, 'max_depth': 6, 'min_samples_split': 4, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 1,
+      "config": "{'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 2,
+      "config": "{'n_estimators': 150, 'max_depth': 4, 'learning_rate': 0.05, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 3,
+      "config": "{'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.1, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 4,
+      "config": "{'n_estimators': 100, 'max_depth': 6, 'learning_rate': 0.2, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 5,
+      "config": "{'n_estimators': 300, 'max_depth': 3, 'learning_rate': 0.05, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 6,
+      "config": "{'n_estimators': 250, 'max_depth': 4, 'learning_rate': 0.08, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 7,
+      "config": "{'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 8,
+      "config": "{'n_estimators': 400, 'max_depth': 3, 'learning_rate': 0.03, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 9,
+      "config": "{'n_estimators': 100, 'max_depth': 8, 'learning_rate': 0.15, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 10,
+      "config": "{'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.05, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 11,
+      "config": "{'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.1, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 12,
+      "config": "{'n_estimators': 500, 'max_depth': 4, 'learning_rate': 0.02, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    },
+    {
+      "model": "XGBoost",
+      "config_id": 13,
+      "config": "{'n_estimators': 150, 'max_depth': 10, 'learning_rate': 0.1, 'random_state': 42}",
+      "cv_mean": 1.0,
+      "cv_std": 0.0,
+      "test_r2": 1.0,
+      "test_mse": 0.0,
+      "test_mae": 0.0
+    }
+  ]
+}

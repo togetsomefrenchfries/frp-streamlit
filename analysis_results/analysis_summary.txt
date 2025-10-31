@@ -1,0 +1,126 @@
+FRP钢筋耐久性预测 - 13个特征数据分布分析报告
+==================================================
+
+分析时间: 2025-09-23T23:22:36.306007
+总特征数: 13
+成功分析: 13
+数值特征: 8
+分类特征: 5
+分析成功率: 100.0%
+
+各特征分析结果:
+------------------------------
+
+pH_of_condition_enviroment:
+  数据列: pH_of_concrete
+  类型: numerical
+  描述: 环境条件pH值 (1-14)
+  总样本: 6192
+  有效数值: 420
+  统计: 均值=12.263, 标准差=0.586
+  特殊值: {'SMD': 4634, 'NotReported': 938, 'Not reported': 12, 'not reported': 12, 'Missing': 28}
+
+Chloride_ion:
+  数据列: ingredient
+  类型: categorical
+  描述: 氯离子浓度
+  总样本: 6192
+  唯一值: 82
+  特殊值: {'SMD': 706, 'NotReported': 971, 'Not reported': 12, 'not reported': 12}
+
+concrete:
+  数据列: concrete
+  类型: categorical
+  描述: 混凝土环境 (0/1)
+  总样本: 6192
+  唯一值: 215
+  特殊值: {'SMD': 4634, 'NotReported': 136}
+
+diameter:
+  数据列: diameter
+  类型: numerical
+  描述: 纤维直径 (mm)
+  总样本: 6192
+  有效数值: 5676
+  统计: 均值=10.171, 标准差=5.041
+  特殊值: {'SMD': 41, 'NotReported': 263}
+
+load_value:
+  数据列: value
+  类型: numerical
+  描述: 载荷值
+  总样本: 6192
+  有效数值: 520
+  统计: 均值=638.770, 标准差=1024.758
+  特殊值: {'SMD': 5533, 'NotReported': 36}
+
+fiber_content:
+  数据列: Fiber_content_weight
+  类型: numerical
+  描述: 纤维含量 (%)
+  总样本: 6192
+  有效数值: 1680
+  统计: 均值=78.872, 标准差=5.958
+  特殊值: {'NotReported': 4416}
+
+Glass_or_Basalt:
+  数据列: Fiber_type
+  类型: categorical
+  描述: 纤维类型 (Glass/Basalt)
+  总样本: 6192
+  唯一值: 9
+
+Vinyl_ester_or_Epoxy:
+  数据列: Matrix_type
+  类型: categorical
+  描述: 树脂类型 (Vinyl_ester/Epoxy)
+  总样本: 6192
+  唯一值: 13
+  特殊值: {'NotReported': 37}
+
+condition_time:
+  数据列: time
+  类型: numerical
+  描述: 条件时间 (days/hours)
+  总样本: 6192
+  有效数值: 6162
+  统计: 均值=4918.709, 标准差=10176.039
+  特殊值: {'SMD': 8}
+
+Temperature:
+  数据列: temperature
+  类型: numerical
+  描述: 温度 (°C)
+  总样本: 6192
+  有效数值: 5596
+  统计: 均值=43.194, 标准差=16.858
+  特殊值: {'SMD': 387}
+
+Tensile_strength_retention:
+  数据列: retention1
+  类型: numerical
+  描述: 拉伸强度保持率 (0-1)
+  总样本: 6192
+  有效数值: 4989
+  统计: 均值=0.866, 标准差=1.770
+  特殊值: {'SMD': 1195, 'NotReported': 8}
+
+surface_treatment:
+  数据列: surface_treatment
+  类型: categorical
+  描述: 表面处理 (Yes/No)
+  总样本: 6192
+  唯一值: 9
+  特殊值: {'SMD': 51, 'NotReported': 757}
+
+glass_transition_temperature:
+  数据列: glass_transition_temperature
+  类型: numerical
+  描述: 玻璃化转变温度 (°C)
+  总样本: 6192
+  有效数值: 2501
+  统计: 均值=123.893, 标准差=23.507
+  特殊值: {'NotReported': 3591}
+
+未分析的特征:
+--------------------

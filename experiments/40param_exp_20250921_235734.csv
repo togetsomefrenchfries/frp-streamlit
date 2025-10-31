@@ -1,0 +1,6 @@
+model,config_id,config,cv_mean,cv_std,test_r2,test_mse,test_mae
+RandomForest,1,"{'n_estimators': 50, 'max_depth': 5, 'min_samples_split': 2, 'random_state': 42}",0.9989271981284601,0.00012335468496928284,0.9990214514769824,387.0064957902552,13.410814993973272
+RandomForest,2,"{'n_estimators': 100, 'max_depth': 7, 'min_samples_split': 2, 'random_state': 42}",0.9999441893045443,1.1876544866582004e-05,0.9999304419988274,27.509518081911793,1.9719278127108093
+RandomForest,3,"{'n_estimators': 100, 'max_depth': 10, 'min_samples_split': 3, 'random_state': 42}",0.9999785802661508,1.8097280435922466e-05,0.9999484259601934,20.39703494491299,0.2831179757624243
+RandomForest,4,"{'n_estimators': 150, 'max_depth': 8, 'min_samples_split': 2, 'random_state': 42}",0.9999736822153871,1.797589941772628e-05,0.9999425695102325,22.713204377306692,0.8750626745739704
+RandomForest,5,"{'n_estimators': 200, 'max_depth': 6, 'min_samples_split': 4, 'random_state': 42}",0.9998128326291026,2.3148034455028704e-05,0.9998123229186975,74.22447417428633,4.932150469279495

@@ -1,0 +1,58 @@
+{
+  "experiment_id": "20250921_235734",
+  "timestamp": "2025-09-21T23:58:02.283546",
+  "total_configs": 5,
+  "data_filter": "Comments=1",
+  "results": [
+    {
+      "model": "RandomForest",
+      "config_id": 1,
+      "config": "{'n_estimators': 50, 'max_depth': 5, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 0.9989271981284601,
+      "cv_std": 0.00012335468496928284,
+      "test_r2": 0.9990214514769824,
+      "test_mse": 387.0064957902552,
+      "test_mae": 13.410814993973272
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 2,
+      "config": "{'n_estimators': 100, 'max_depth': 7, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 0.9999441893045443,
+      "cv_std": 1.1876544866582004e-05,
+      "test_r2": 0.9999304419988274,
+      "test_mse": 27.509518081911793,
+      "test_mae": 1.9719278127108093
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 3,
+      "config": "{'n_estimators': 100, 'max_depth': 10, 'min_samples_split': 3, 'random_state': 42}",
+      "cv_mean": 0.9999785802661508,
+      "cv_std": 1.8097280435922466e-05,
+      "test_r2": 0.9999484259601934,
+      "test_mse": 20.39703494491299,
+      "test_mae": 0.2831179757624243
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 4,
+      "config": "{'n_estimators': 150, 'max_depth': 8, 'min_samples_split': 2, 'random_state': 42}",
+      "cv_mean": 0.9999736822153871,
+      "cv_std": 1.797589941772628e-05,
+      "test_r2": 0.9999425695102325,
+      "test_mse": 22.713204377306692,
+      "test_mae": 0.8750626745739704
+    },
+    {
+      "model": "RandomForest",
+      "config_id": 5,
+      "config": "{'n_estimators': 200, 'max_depth': 6, 'min_samples_split': 4, 'random_state': 42}",
+      "cv_mean": 0.9998128326291026,
+      "cv_std": 2.3148034455028704e-05,
+      "test_r2": 0.9998123229186975,
+      "test_mse": 74.22447417428633,
+      "test_mae": 4.932150469279495
+    }
+  ]
+}

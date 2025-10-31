@@ -1,0 +1,177 @@
+两层标题结构分析报告
+第3行: 大类标题
+第4行: 细分列名
+==================================================
+
+📁 Group_name (1 个细分列):
+   [  0] feature_name
+
+📁 Source_information (7 个细分列):
+   [  1] Title
+   [  2] Author
+   [  3] SCI
+   [  4] Journal_or_Conference_name
+   [  5] Year
+   [  6] No.
+   [  7] no.
+
+📁 Rebar_information (22 个细分列):
+   [  8] Fiber_type
+   [  9] Fiber_type_detail
+   [ 10] Matrix_type
+   [ 11] Matrix_type_detail
+   [ 12] glass_transition_temperature
+   [ 13] glass_transition_temperature_run_2
+   [ 14] cure_ratio
+   [ 15] Fiber_content_weight
+   [ 16] Fiber_content_volume
+   [ 17] Void_content
+   [ 18] diameter
+   [ 19] average_area
+   [ 20] nominal_area
+   [ 21] rib
+   [ 22] surface_treatment
+   [ 23] Water_absorption_at_saturation
+   [ 24] Water_absorption_test_standard
+   [ 25] Water_absorption_note
+   [ 26] Brand_name
+   [ 27] Manufacturer
+   [ 28] Important_notes
+   [ 29] Notes_of_rebar
+
+📁 Target_parameter (2 个细分列):
+   [ 30] Target_parameter
+   [ 31] note_of_target_parameter
+
+📁 Mechanical_property_of_control_groups (11 个细分列):
+   [ 32] num
+   [ 33] note_of_number
+   [ 34] Value1
+   [ 35] COV1
+   [ 36] note_of_Value1
+   [ 37] Value2
+   [ 38] COV2
+   [ 39] Value2note
+   [ 40] Value3
+   [ 41] COV3
+   [ 42] Value3note
+
+📁 Image_of_control_groups (6 个细分列):
+   [ 43] SEM-T-BCBT
+   [ 44] SEM-L-BCBT
+   [ 45] OTHER
+   [ 46] OTHER1
+   [ 47] FTIR
+   [ 48] note
+
+📁 Condition_environment (10 个细分列):
+   [ 49] temperature
+   [ 50] note_of_temperature
+   [ 51] time
+   [ 52] note_of_time
+   [ 53] concrete
+   [ 54] pH_of_concrete
+   [ 55] strength_of_concrete
+   [ 56] crack
+   [ 57] cover
+   [ 58] note_of_concrete
+
+📁 solution_condition (3 个细分列):
+   [ 59] pH
+   [ 60] pHafter
+   [ 61] ingredient
+
+📁 moisture_condition (4 个细分列):
+   [ 62] pH
+   [ 63] RH
+   [ 64] ingredient
+   [ 65] note
+
+📁 field_condition (6 个细分列):
+   [ 66] Location
+   [ 67] Effektive_Klimaklassifikation
+   [ 68] field_average_humidity
+   [ 69] field_average_temperature
+   [ 70] pH
+   [ 71] Ingrediant
+
+📁 Cycle_condition (14 个细分列):
+   [ 72] number
+   [ 73] type
+   [ 74] SolutionorMoisture
+   [ 75] cycle_pH
+   [ 76] cycle_pH_after
+   [ 77] cycle_ingredient
+   [ 78] temp
+   [ 79] temp2
+   [ 80] RH
+   [ 81] RH2
+   [ 82] OTHER1
+   [ 83] OTHER2
+   [ 84] time_in_cycle
+   [ 85] note
+
+📁 UV (2 个细分列):
+   [ 86] UV
+   [ 87] note
+
+📁 Load (6 个细分列):
+   [ 88] stress_or_strain
+   [ 89] type_of_load
+   [ 90] value
+   [ 91] ultimate_tensile_strength
+   [ 92] tensile_modulus
+   [ 93] note
+
+📁 after_condition (2 个细分列):
+   [ 94] after_condition
+   [ 95] note
+
+📁 Mechanical_result (13 个细分列):
+   [ 96] num
+   [ 97] Value1
+   [ 98] COV1
+   [ 99] Value1note
+   [100] retention1
+   [101] Value2
+   [102] COV2
+   [103] Value2note
+   [104] retention2
+   [105] Value3
+   [106] COV3
+   [107] Value3note
+   [108] retention3
+
+📁 Water_absorption_result (4 个细分列):
+   [109] num
+   [110] water_absorption_ratio
+   [111] COV
+   [112] note
+
+📁 Glass_transition_temperature_result (6 个细分列):
+   [113] num
+   [114] glass_transition_temperature
+   [115] run2
+   [116] COV
+   [117] cure_ratio
+   [118] note
+
+📁 OTHERS_result (3 个细分列):
+   [119] num
+   [120] OTHERS
+   [121] OTHERS_note
+
+📁 Image_result (12 个细分列):
+   [122] SEM-T-BCAT
+   [123] SEM-L-BCAT
+   [124] SEM-T-ACBT
+   [125] SEM-L-ACBT
+   [126] SEM-T-ACAT
+   [127] SEM-L-ACAT
+   [128] other
+   [129] other2
+   [130] note
+   [131] FTIR
+   [132] note
+   [133] important_note
+

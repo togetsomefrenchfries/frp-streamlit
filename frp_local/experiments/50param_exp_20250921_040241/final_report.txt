@@ -1,0 +1,46 @@
+FRP 50参数超参数搜索实验报告
+============================================================
+
+实验ID: 20250921_040241
+完成时间: 2025-09-21 04:03:59.912277
+总配置数: 150
+
+RandomForest 结果汇总:
+------------------------------
+配置数量: 50
+CV R² - 最佳: 0.5275
+CV R² - 平均: 0.4741
+CV R² - 最差: 0.3368
+测试R² - 最佳: 0.5643
+测试R² - 平均: 0.4993
+平均训练时间: 0.67s
+最佳配置参数: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': 10, 'max_features': 'log2', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 250, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+
+XGBoost 结果汇总:
+------------------------------
+配置数量: 50
+CV R² - 最佳: 0.5452
+CV R² - 平均: 0.4576
+CV R² - 最差: 0.2241
+测试R² - 最佳: 0.5616
+测试R² - 平均: 0.4708
+平均训练时间: 0.16s
+最佳配置参数: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.7, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': None, 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.05, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 5, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 200, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.6, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}
+
+LightGBM 结果汇总:
+------------------------------
+配置数量: 50
+CV R² - 最佳: 0.5304
+CV R² - 平均: 0.4306
+CV R² - 最差: 0.2298
+测试R² - 最佳: 0.5577
+测试R² - 平均: 0.4464
+平均训练时间: 0.41s
+最佳配置参数: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 1.0, 'importance_type': 'split', 'learning_rate': 0.05, 'max_depth': 6, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 200, 'n_jobs': None, 'num_leaves': 50, 'objective': None, 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.7, 'subsample_for_bin': 200000, 'subsample_freq': 0}
+
+整体最佳配置:
+--------------------
+模型: XGBoost
+CV R²: 0.5452
+测试R²: 0.5576
+参数: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.7, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': None, 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.05, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 5, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 200, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.6, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}
