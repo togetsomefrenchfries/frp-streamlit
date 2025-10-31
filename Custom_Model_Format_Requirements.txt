@@ -1,0 +1,194 @@
+================================================================================
+                    Custom Model File Format Requirements
+                          FRP Prediction Platform
+================================================================================
+
+📋 OVERVIEW
+-----------
+This document specifies the file format requirements for importing custom 
+machine learning models into the FRP prediction platform.
+
+📦 REQUIRED FILES
+-----------------
+1. Model file (.pkl) - Required
+2. Preprocessor file (.pkl) - Optional but recommended
+3. Feature configuration - Input via interface
+
+================================================================================
+📄 1. MODEL FILE REQUIREMENTS
+================================================================================
+
+File Extensions:
+✅ .pkl (recommended)
+✅ .pickle
+
+Content Requirements:
+✅ Must be Python pickle serialized object
+✅ Model object must have predict() method
+✅ Supports sklearn, XGBoost, LightGBM models
+
+Supported Model Types:
+✅ scikit-learn: RandomForest, DecisionTree, ExtraTrees, etc.
+✅ XGBoost: XGBRegressor, XGBClassifier
+✅ LightGBM: LGBMRegressor, LGBMClassifier
+✅ Custom models with predict() method
+
+Example:
+```python
+import pickle
+from sklearn.ensemble import RandomForestRegressor
+
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X_train, y_train)
+
+with open('my_model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+```
+
+================================================================================
+🔧 2. PREPROCESSOR FILE REQUIREMENTS  
+================================================================================
+
+File Extensions:
+✅ .pkl (recommended)
+✅ .pickle
+
+Content Requirements:
+✅ Must be Python pickle serialized preprocessor object
+✅ Must have transform() method
+✅ Supports sklearn preprocessors
+
+Supported Types:
+✅ StandardScaler, MinMaxScaler, RobustScaler
+✅ Pipeline, ColumnTransformer objects
+✅ Custom preprocessors with transform() method
+
+Recommended for:
+⚠️ Neural Network (MLP) - Required
+⚠️ Support Vector Machine - Strongly recommended  
+⚠️ Linear Models - Recommended
+✅ Tree models - Optional
+
+================================================================================
+🏷️ 3. FEATURE CONFIGURATION
+================================================================================
+
+Format:
+- One feature name per line
+- Must match training features exactly
+- Case sensitive
+- No empty lines
+
+Example:
+```
+pH
+Fiber_content_wt
+Diameter_mm
+Temp_C
+Duration_hours
+```
+
+================================================================================
+📊 4. MODEL TYPE SELECTION
+================================================================================
+
+Choose the correct model type from 13 available options:
+
+Basic Types:
+- Regression, Classification
+
+Tree Models:
+- Random Forest, Decision Tree, Extra Trees
+
+Boosting Models:
+- XGBoost, LightGBM, Gradient Boosting, AdaBoost
+
+Advanced Models:
+- Neural Network (MLP), Support Vector Machine, Linear Model, Ensemble Model
+
+================================================================================
+🚀 5. UPLOAD STEPS
+================================================================================
+
+1. Prepare .pkl model file
+2. Prepare .pkl preprocessor file (if needed)  
+3. Go to "Model Configuration" tab
+4. Check "Use Custom Pre-trained Model"
+5. Upload files and configure features
+6. Click "Validate and Save Custom Model"
+
+================================================================================
+⚠️ 6. COMMON ISSUES
+================================================================================
+
+Unsupported Formats:
+❌ .h5, .joblib, .json, .xml files
+❌ TensorFlow, PyTorch native formats
+✅ Only Python pickle (.pkl) supported
+
+Feature Mismatch:
+❌ Different feature names → Prediction failure
+❌ Different feature count → Error
+✅ Ensure exact feature name and order match
+
+Preprocessor Issues:
+❌ Mismatched preprocessor → Poor predictions
+✅ Use same preprocessor as training
+✅ Neural networks and SVM strongly need preprocessor
+
+================================================================================
+🧪 7. TEST MODELS PROVIDED
+================================================================================
+
+10 pre-built test models available:
+- test_random_forest_model.pkl
+- test_neural_network_mlp_model.pkl  
+- test_xgboost_model.pkl
+- test_lightgbm_model.pkl
+- ... and 6 more
+
+Test preprocessor:
+- test_preprocessor.pkl
+
+Test features:
+```
+pH
+Fiber_content_wt  
+Diameter_mm
+Temp_C
+Duration_hours
+```
+
+================================================================================
+✅ CHECKLIST
+================================================================================
+
+Before uploading, ensure:
+☑️ Model file is .pkl format
+☑️ Model has predict() method
+☑️ Features match exactly (names + order)
+☑️ Preprocessor matches training (if used)
+☑️ Correct model type selected
+☑️ File sizes are reasonable (<50MB recommended)
+
+================================================================================
+📞 SUPPORT
+================================================================================
+
+Common Error Messages:
+- "Invalid model: Model must have a 'predict' method"
+  → Check model serialization
+- "Prediction failed"  
+  → Check feature configuration
+- "Custom preprocessor failed"
+  → Check preprocessor compatibility
+
+Success Criteria:
+✅ Model uploads without errors
+✅ Validation passes
+✅ Test predictions work
+✅ Features display correctly
+
+================================================================================
+File Version: v1.0 | Updated: 2025-10-31 | Supported Types: 13
+================================================================================

@@ -1,0 +1,23 @@
+# Streamlit配置文件 - FRP钢筋耐久性预测应用
+
+[theme]
+primaryColor = "#1e3d59"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f0e1"
+textColor = "#262730"
+
+[server]
+# 服务器配置 - 生产环境优化
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+maxUploadSize = 50
+
+[browser]
+# 浏览器配置
+gatherUsageStats = false
+
+[logger]
+# 日志配置
+level = "info"

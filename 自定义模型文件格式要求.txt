@@ -1,0 +1,286 @@
+================================================================================
+                    FRP平台自定义模型文件格式要求
+================================================================================
+
+📋 概述
+--------
+本文档详细说明了在FRP预测平台中导入自定义机器学习模型所需的文件格式和要求。
+
+📦 必需文件
+-----------
+1. 模型文件 (.pkl) - 必需
+2. 预处理器文件 (.pkl) - 可选但推荐
+3. 特征配置 - 通过界面输入
+
+================================================================================
+📄 1. 模型文件格式要求
+================================================================================
+
+文件扩展名：
+- .pkl (推荐)
+- .pickle
+
+文件内容要求：
+- 必须是使用Python pickle模块序列化的对象
+- 模型对象必须具有 predict() 方法
+- 支持sklearn、XGBoost、LightGBM等主流库的模型
+
+支持的模型类型：
+✅ scikit-learn模型：
+   - RandomForestRegressor/Classifier
+   - DecisionTreeRegressor/Classifier
+   - ExtraTreesRegressor/Classifier
+   - GradientBoostingRegressor/Classifier
+   - AdaBoostRegressor/Classifier
+   - MLPRegressor/MLPClassifier
+   - SVR/SVC
+   - LinearRegression/LogisticRegression
+   - Ridge/Lasso/ElasticNet
+
+✅ XGBoost模型：
+   - XGBRegressor
+   - XGBClassifier
+
+✅ LightGBM模型：
+   - LGBMRegressor
+   - LGBMClassifier
+
+✅ 自定义模型：
+   - 任何实现了predict()方法的Python对象
+
+创建模型文件示例：
+```python
+import pickle
+from sklearn.ensemble import RandomForestRegressor
+
+# 训练模型
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X_train, y_train)
+
+# 保存模型
+with open('my_model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+```
+
+================================================================================
+🔧 2. 预处理器文件格式要求
+================================================================================
+
+文件扩展名：
+- .pkl (推荐)
+- .pickle
+
+文件内容要求：
+- 必须是使用Python pickle模块序列化的预处理器对象
+- 预处理器必须具有 transform() 方法
+- 支持sklearn的各种预处理器
+
+支持的预处理器类型：
+✅ sklearn预处理器：
+   - StandardScaler
+   - MinMaxScaler
+   - RobustScaler
+   - Normalizer
+   - QuantileTransformer
+   - PowerTransformer
+   - LabelEncoder
+   - OneHotEncoder
+
+✅ 自定义预处理器管道：
+   - Pipeline对象
+   - ColumnTransformer对象
+
+创建预处理器文件示例：
+```python
+import pickle
+from sklearn.preprocessing import StandardScaler
+
+# 创建并训练预处理器
+scaler = StandardScaler()
+scaler.fit(X_train)
+
+# 保存预处理器
+with open('my_preprocessor.pkl', 'wb') as f:
+    pickle.dump(scaler, f)
+```
+
+强烈建议使用预处理器的模型类型：
+⚠️ Neural Network (MLP) - 必需标准化
+⚠️ Support Vector Machine - 强烈推荐
+⚠️ Linear Model - 推荐
+✅ 树模型系列 - 可选
+
+================================================================================
+🏷️ 3. 特征配置要求
+================================================================================
+
+特征名称格式：
+- 每行一个特征名称
+- 特征名称必须与训练时使用的完全一致
+- 区分大小写
+- 不允许空行或空白字符
+
+示例特征配置：
+```
+pH
+Fiber_content_wt
+Diameter_mm
+Temp_C
+Duration_hours
+```
+
+特征数据类型：
+✅ 数值特征：int, float
+✅ 分类特征：string, int（需要预处理）
+❌ 不支持：复杂对象、嵌套结构
+
+================================================================================
+📊 4. 模型类型选择指南
+================================================================================
+
+平台支持13种模型类型，选择正确的类型很重要：
+
+基础分类：
+- Regression：通用回归模型
+- Classification：通用分类模型
+
+树模型系列：
+- Random Forest：适用于RandomForest模型
+- Decision Tree：适用于DecisionTree模型
+- Extra Trees：适用于ExtraTrees模型
+
+梯度提升系列：
+- XGBoost：适用于XGBoost模型
+- LightGBM：适用于LightGBM模型
+- Gradient Boosting：适用于GradientBoosting模型
+- AdaBoost：适用于AdaBoost模型
+
+高级模型系列：
+- Neural Network (MLP)：适用于神经网络模型
+- Support Vector Machine：适用于SVM模型
+- Linear Model：适用于线性模型
+- Ensemble Model：适用于集成模型
+
+================================================================================
+🚀 5. 文件上传步骤
+================================================================================
+
+第1步：准备文件
+- 确保模型文件为.pkl格式
+- 如需预处理，准备预处理器文件
+- 准备特征名称列表
+
+第2步：进入平台
+- 访问FRP预测平台
+- 进入"Model Configuration"标签页
+- 勾选"Use Custom Pre-trained Model"
+
+第3步：上传文件
+- 上传模型文件(.pkl)
+- 上传预处理器文件(.pkl) - 可选
+- 输入模型名称
+- 选择正确的模型类型
+
+第4步：配置特征
+- 在特征配置区域输入特征名称
+- 每行一个特征
+- 确保与训练时特征顺序一致
+
+第5步：验证保存
+- 点击"Validate and Save Custom Model"
+- 等待验证完成
+- 查看模型信息确认无误
+
+================================================================================
+⚠️ 6. 常见问题和注意事项
+================================================================================
+
+文件格式问题：
+❌ 不支持：.h5, .joblib, .json, .xml等格式
+❌ 不支持：TensorFlow、PyTorch原生格式
+✅ 仅支持：Python pickle格式(.pkl)
+
+模型兼容性：
+❌ 不支持：需要特殊库的自定义模型
+❌ 不支持：需要GPU的深度学习模型
+✅ 支持：标准sklearn、XGBoost、LightGBM模型
+
+特征匹配：
+❌ 特征名称不匹配会导致预测失败
+❌ 特征数量不匹配会导致错误
+✅ 确保特征名称和数量完全一致
+
+预处理器：
+❌ 预处理器和模型不匹配会影响预测效果
+✅ 使用训练时相同的预处理器
+✅ 神经网络和SVM模型强烈建议使用预处理器
+
+================================================================================
+🧪 7. 测试模型示例
+================================================================================
+
+平台提供了10个预制测试模型供您验证功能：
+
+模型文件列表：
+- test_random_forest_model.pkl
+- test_decision_tree_model.pkl
+- test_extra_trees_model.pkl
+- test_gradient_boosting_model.pkl
+- test_adaboost_model.pkl
+- test_neural_network_mlp_model.pkl
+- test_support_vector_machine_model.pkl
+- test_linear_model_model.pkl
+- test_xgboost_model.pkl
+- test_lightgbm_model.pkl
+
+预处理器文件：
+- test_preprocessor.pkl
+
+测试特征配置：
+```
+pH
+Fiber_content_wt
+Diameter_mm
+Temp_C
+Duration_hours
+```
+
+这些文件可以直接用于测试平台的自定义模型导入功能。
+
+================================================================================
+📞 8. 技术支持
+================================================================================
+
+如果遇到问题，请检查：
+1. 文件格式是否为.pkl
+2. 模型是否具有predict()方法
+3. 特征配置是否正确
+4. 预处理器是否与模型匹配
+5. 模型类型选择是否正确
+
+常见错误信息：
+- "Invalid model: Model must have a 'predict' method"
+  → 检查模型对象是否正确序列化
+
+- "Prediction failed"
+  → 检查特征名称和数量是否匹配
+
+- "Custom preprocessor failed"
+  → 检查预处理器是否与训练时一致
+
+================================================================================
+✅ 总结
+================================================================================
+
+成功导入自定义模型需要：
+1. ✅ 正确的.pkl格式模型文件
+2. ✅ 可选的.pkl格式预处理器文件
+3. ✅ 准确的特征名称配置
+4. ✅ 正确的模型类型选择
+5. ✅ 合适的预处理策略
+
+遵循以上要求，您就可以成功导入和使用自己训练的机器学习模型了！
+
+================================================================================
+版本信息：v1.0 | 更新时间：2025-10-31 | 支持模型类型：13种
+================================================================================

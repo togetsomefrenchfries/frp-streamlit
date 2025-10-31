@@ -1,4 +1,5 @@
-streamlit==1.38.0
+# FRP预测平台依赖包 - 云部署优化版本
+streamlit==1.49.1
 pandas==2.1.4
 numpy>=1.24.0,<2.0.0
 scikit-learn==1.5.1
@@ -12,3 +13,6 @@ pymysql==1.1.0
 altair==5.2.0
 mysql-connector-python==8.2.0
 cryptography>=3.4.8,<42.0.0
+seaborn
+matplotlib
+openpyxl
