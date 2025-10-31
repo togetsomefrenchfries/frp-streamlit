@@ -1,0 +1,21 @@
+# Railway部署环境变量配置
+# 复制这些变量到Railway项目的Environment Variables中
+
+# 数据库配置（从Railway MySQL服务获取）
+DB_HOST=containers-us-west-xxx.railway.app  # Railway提供的数据库主机
+DB_PORT=3306
+DB_USER=root  # 或Railway提供的用户名
+DB_PASSWORD=your_railway_password  # Railway生成的密码
+DB_NAME=railway  # Railway默认数据库名
+
+# 或者使用DATABASE_URL（推荐）
+DATABASE_URL=mysql://user:password@host:port/database
+
+# 应用设置
+APP_DEBUG=false
+SECRET_KEY=frp-prediction-production-key-2025
+
+# Streamlit配置
+STREAMLIT_SERVER_HEADLESS=true
+STREAMLIT_SERVER_ENABLE_CORS=false
+STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION=false
