@@ -33,7 +33,10 @@ logger = logging.getLogger(__name__)
 
 class Database4ToRailwayMigrator:
     def __init__(self):
-        self.excel_file = 'database 4.xlsx'
+        # Excel文件路径 - 可修改为您的文件位置
+        self.excel_file = 'database 4.xlsx'  # 默认当前目录
+        # self.excel_file = r'C:\Users\YourName\Documents\database 4.xlsx'  # 绝对路径示例
+        # self.excel_file = r'../数据文件/database 4.xlsx'  # 相对路径示例
         self.railway_config = None
         self.railway_engine = None
         
@@ -72,7 +75,7 @@ class Database4ToRailwayMigrator:
         ]
     
     def check_excel_file(self):
-        """检查Excel文件是否存在"""
+        """检查Excel文件是否存在，如果不存在则提示用户输入路径"""
         logger.info(f"📍 检查Excel文件: {self.excel_file}")
         
         if os.path.exists(self.excel_file):
@@ -81,8 +84,23 @@ class Database4ToRailwayMigrator:
             return True
         else:
             logger.error(f"❌ 找不到文件: {self.excel_file}")
-            logger.error("请确保 database 4.xlsx 文件在当前目录中")
-            return False
+            print("\n📁 请指定Excel文件的位置:")
+            print("示例:")
+            print("  - 当前目录: database 4.xlsx")
+            print("  - 绝对路径: C:\\Users\\YourName\\Documents\\database 4.xlsx")
+            print("  - 相对路径: ../数据文件/database 4.xlsx")
+            
+            new_path = input("\n请输入Excel文件完整路径: ").strip().strip('"')
+            
+            if os.path.exists(new_path):
+                self.excel_file = new_path
+                file_size = os.path.getsize(self.excel_file) / (1024*1024)
+                logger.info(f"✅ 找到文件: {self.excel_file}")
+                logger.info(f"文件大小: {file_size:.2f} MB")
+                return True
+            else:
+                logger.error(f"❌ 指定的文件不存在: {new_path}")
+                return False
     
     def get_railway_config(self):
         """获取Railway数据库配置"""
